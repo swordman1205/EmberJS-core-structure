@@ -1,0 +1,31 @@
+﻿<div class="popup-modal-data">
+    <label class="input-holder">
+        <span class="input-holder-label-text">Your photo</span>
+        {{secure-image src=model.photoUrl security=model.photoSecurity alt=model.photoTitle defaultImg="/images/default_logo.png"}}
+        {{!-- {{#view "photo-select"}}
+        {{input id="photo-select" class="hide" type="file" accept="image/*"}}
+        <button class="blue-btn" type="button" {{action "openDialog" target=view}}>Browse</button>
+        {{/view}} --}}
+    </label>
+    <label class="input-holder">
+        <span class="input-holder-label-text">Your email</span>
+        {{input type="text" class="popup-modal-input" placeholder="Enter email" value=model.email}}
+    </label>
+    <div class="popup-modal-holder-underwrite">
+        <label>
+            {{input  type="checkbox" checked=model.canSendEmail}} <span>Send me notification emails about new messages</span>
+        </label>
+    </div>
+    <label class="input-holder">
+        <span class="input-holder-label-text">Full name</span>
+        {{input type="text" class="popup-modal-input" value=model.fullName}}
+    </label>
+    <label class="input-holder">
+        <span class="input-holder-label-text">Signature</span>
+        {{textarea class="popup-modal-input" placeholder="Please enter your signature that will appear in the bottom of your mail" value=model.signature}}
+    </label>
+    <div class="popup-modal-actions flr">
+        <button class="popup-btn s-blue-btn" {{action 'close'}}>Cancel</button>
+        <button class="popup-btn blue-btn" {{action 'save'}}>Save</button>
+    </div>
+</div>

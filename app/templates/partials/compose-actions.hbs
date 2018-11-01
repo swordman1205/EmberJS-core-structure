@@ -1,0 +1,14 @@
+<div class="modal-window-actions">
+
+  {{! Actions }}
+  <button class="msg-btn orange-btn" disabled={{isWorking}} {{action "send" this}}>Send</button>
+  <button class="msg-btn white-btn" disabled={{isWorking}} {{action "discard"}}>Discard</button>
+
+  {{! Status }}
+  <span class="compose-status fll {{unless isSaving 'hide'}}">Saving</span>
+  <span class="compose-status fll {{if isDirty 'hide'}}">&#10004; Saved</span>
+
+  {{! Attachments }}
+  {{!-- <button class="msg-btn white-btn flr" {{action "attachFromCloud" model}}>Attach from cloud</button> --}}
+  <button class="msg-btn white-btn flr" {{action "attach"}}>Attach</button>
+</div>

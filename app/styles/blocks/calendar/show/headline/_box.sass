@@ -1,0 +1,58 @@
+.calendar-header-box
+  float: right
+  position: relative
+  z-index: 3
+  padding-top: 5px
+
+  .calendar-print-btn
+    float: left
+    margin: 5px 15px 0 0
+    cursor: pointer
+    @extend .ico-popup-file-print
+    +ti
+
+  .calendar-year-list
+    float: left
+    position: relative
+    color: #b7bac6
+    font-size: 22px
+    font-weight: 300
+    &:hover
+      .val
+        color: #9492A3
+        &:after
+          @extend .ico-dd-arrow_hov
+      .calendar-year-dd
+        display: block
+    .val
+      display: block
+      position: relative
+      padding-right: 20px
+      cursor: pointer
+      z-index: 4
+      &:after
+        position: absolute
+        content: ""
+        top: 50%
+        right: 0
+        margin-top: -3px
+        @extend .ico-dd-arrow
+
+    .calendar-year-dd
+      display: none
+      position: absolute
+      z-index: 3
+      top: -10px
+      left: -15px
+      width: 100%
+      padding: 35px 15px 10px 15px
+      background-color: #fff
+      border: 1px solid #e2e3ea
+      +border-radius(3px)
+      span
+        display: block
+        margin-bottom: 5px
+        cursor: pointer
+        padding-right: 20px
+        &:hover
+          color: #9492A3

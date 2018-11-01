@@ -1,0 +1,193 @@
+{{! Toolbar }}
+<div class="btn-toolbar wysiwyg-toolbar wysiwyg-style2" data-role="editor-toolbar" data-target="#editor-content">
+
+  {{! Font family }}
+  <div class="btn-group">
+
+    <a class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+      <i class="ace-icon fa fa-font"></i>
+      <i class="ace-icon fa fa-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-caret">
+      <li>
+        <a style="font-family: 'Arial'" data-edit="fontName Arial">Arial</a>
+      </li>
+      <li>
+        <a style="font-family: 'Courier'" data-edit="fontName Courier">Courier</a>
+      </li>
+      <li>
+        <a style="font-family: 'Comic Sans MS'" data-edit="fontName Comic Sans MS">Comic Sans MS</a>
+      </li>
+      <li>
+        <a style="font-family: 'Helvetica'" data-edit="fontName Helvetica">Helvetica</a>
+      </li>
+      <li>
+        <a style="font-family: 'Open Sans'" data-edit="fontName Open Sans">Open Sans</a>
+      </li>
+      <li>
+        <a style="font-family: 'Tahoma'" data-edit="fontName Tahoma">Tahoma</a>
+      </li>
+      <li>
+        <a style="font-family: 'Verdana'" data-edit="fontName Verdana">Verdana</a>
+      </li>
+    </ul>
+  </div>
+
+  {{! Font size }}
+  <div class="btn-group">
+
+    <a class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+      <i class="ace-icon fa fa-text-height"></i>
+      <i class="ace-icon fa fa-angle-down"></i>
+    </a>
+
+    <ul class="dropdown-menu dropdown-caret">
+      <li>
+        <a data-edit="fontSize 1">
+          <font size="1">Small</font>
+        </a>
+      </li>
+      <li>
+        <a data-edit="fontSize 3">
+          <font size="3">Normal</font>
+        </a>
+      </li>
+      <li>
+        <a data-edit="fontSize 5">
+          <font size="5">Huge</font>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  {{! Font style }}
+  <div class="btn-group">
+
+    {{! Bold }}
+    <a class="btn btn-sm btn-info" data-edit="bold">
+      <i class="ace-icon fa fa-bold"></i>
+    </a>
+
+    {{! Italic }}
+    <a class="btn btn-sm btn-info" data-edit="italic">
+      <i class="ace-icon fa fa-italic"></i>
+    </a>
+
+    {{! Underline }}
+    <a class="btn btn-sm btn-info" data-edit="underline">
+      <i class="ace-icon fa fa-underline"></i>
+    </a>
+
+    {{! Strike through }}
+    <a class="btn btn-sm btn-info" data-edit="strikeThrough">
+      <i class="ace-icon fa fa-strikethrough"></i>
+    </a>
+  </div>
+
+  {{! Text format }}
+  <div class="btn-group">
+
+    {{! Unordered list }}
+    <a class="btn btn-sm btn-info" data-edit="insertUnorderedList">
+      <i class="ace-icon fa fa-list-ul"></i>
+    </a>
+
+    {{! Ordered list }}
+    <a class="btn btn-sm btn-info" data-edit="insertOrderedList">
+      <i class="ace-icon fa fa-list-ol"></i>
+    </a>
+
+    {{! Outdent }}
+    <a class="btn btn-sm btn-info" data-edit="outdent">
+      <i class="ace-icon fa fa-outdent"></i>
+    </a>
+
+    {{! Indent }}
+    <a class="btn btn-sm btn-info" data-edit="indent">
+      <i class="ace-icon fa fa-indent"></i>
+    </a>
+  </div>
+
+  {{! Text align }}
+  <div class="btn-group">
+
+    {{! Left }}
+    <a class="btn btn-sm btn-info" data-edit="justifyLeft">
+      <i class="ace-icon fa fa-align-left"></i>
+    </a>
+
+    {{! Center }}
+    <a class="btn btn-sm btn-info" data-edit="justifyCenter">
+      <i class="ace-icon fa fa-align-center"></i>
+    </a>
+
+    {{! Right }}
+    <a class="btn btn-sm btn-info" data-edit="justifyRight">
+      <i class="ace-icon fa fa-align-right"></i>
+    </a>
+
+    {{! Justify }}
+    <a class="btn btn-sm btn-info" data-edit="justifyFull">
+      <i class="ace-icon fa fa-align-justify"></i>
+    </a>
+  </div>
+
+  {{! Links }}
+  <div class="btn-group">
+
+    {{! Unlink }}
+    <a class="btn btn-sm btn-info" data-edit="unlink">
+      <i class="ace-icon fa fa-unlink"></i>
+    </a>
+
+    {{! Link }}
+    <a class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+      <i class="ace-icon fa fa-link"></i>
+    </a>
+
+    {{! Link dropdown }}
+    <div class="dropdown-menu dropdown-caret dropdown-menu-right">
+      <input class="form-control" placeholder="URL" type="text" data-edit="createLink"/>
+    </div>
+  </div>
+
+  {{! Colors }}
+  <div class="btn-group">
+
+    <div class="dropdown dropdown-colorpicker">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="btn-colorpicker"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-caret dropdown-menu-right">
+        <li><a class="colorpick-btn" style="background-color: #ac725e;" data-edit="foreColor #ac725e"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #d06b64;" data-edit="foreColor #d06b64"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #f83a22;" data-edit="foreColor #f83a22"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #fa573c;" data-edit="foreColor #fa573c"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #ff7537;" data-edit="foreColor #ff7537"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #ffad46;" data-edit="foreColor #ffad46"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #42d692;" data-edit="foreColor #42d692"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #16a765;" data-edit="foreColor #16a765"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #7bd148;" data-edit="foreColor #7bd148"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #b3dc6c;" data-edit="foreColor #b3dc6c"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #fbe983;" data-edit="foreColor #fbe983"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #fad165;" data-edit="foreColor #fad165"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #92e1c0;" data-edit="foreColor #92e1c0"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #9fe1e7;" data-edit="foreColor #9fe1e7"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #9fc6e7;" data-edit="foreColor #9fc6e7"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #4986e7;" data-edit="foreColor #4986e7"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #9a9cff;" data-edit="foreColor #9a9cff"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #b99aff;" data-edit="foreColor #b99aff"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #c2c2c2;" data-edit="foreColor #c2c2c2"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #cabdbf;" data-edit="foreColor #cabdbf"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #cca6ac;" data-edit="foreColor #cca6ac"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #f691b2;" data-edit="foreColor #f691b2"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #cd74e6;" data-edit="foreColor #cd74e6"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #a47ae2;" data-edit="foreColor #a47ae2"></a></li>
+        <li><a class="colorpick-btn" style="background-color: #444444;" data-edit="foreColor #444444"></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{! Editor }}
+<div class="editor-content ember-scroll" id="editor-content"></div>

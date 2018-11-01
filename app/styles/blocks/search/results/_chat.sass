@@ -1,0 +1,62 @@
+.search-results-item
+  &.in-chat
+    padding: 10px 25px
+    
+    .user-status
+      float: left
+      padding: 0 10px 0 18px
+      width: 100px
+      position: relative
+      font-weight: 300
+      font-size: 14px
+      line-height: 21px
+      color: $color-gray
+      +box-sizing(border-box)
+      &:after
+        position: absolute
+        content: ""
+        top: 8px
+        left: 0
+        width: 8px
+        height: 8px
+        background-color: #b3b5bf
+        +border-radius(50%)
+
+      &.online
+        color: #48c27e
+        &:after
+          background-color: #48c27e
+      &.away
+        color: #c8a302
+        &:after
+          background-color: #c8a302
+      &.no-disturb
+        color: #ef3631
+        &:after
+          background-color: #ef3631
+      &.invisible
+        color: #a6abc0
+        &:after
+          background-color: #a6abc0
+
+    .user-name
+      float: left
+      padding-right: 10px
+      width: 155px
+      color: #616161
+      font-size: 14px
+      line-height: 21px
+      font-weight: 500
+      word-break: break-all
+      +box-sizing(border-box)
+
+    .user-preview-msg
+      float: left
+      max-width: 400px
+      color: #676b75
+      font-size: 14px
+      line-height: 21px
+      +box-sizing(border-box)
+      +to
+      +media-below(900)
+        max-width: 200px

@@ -1,0 +1,62 @@
+.msg-preview-list
+  .msg-preview
+    .msg-preview-data
+      float: left
+      display: table
+      width: 130px
+      min-height: 40px
+      +media-below(900)
+        width: 115px
+      .msg-preview-box
+        display: table-cell
+        width: 100%
+        height: 100%
+        vertical-align: middle
+
+    .msg-preview-author
+      width: 130px
+      text-align: left
+      font-size: 14px
+      line-height: 19px
+      color: $color-base
+      +media-below(900)
+        width: 115px
+
+    .msg-preview-topic
+      position: relative
+      display: inline-block
+      text-align: left
+      font-size: 16px
+      line-height: 19px
+      color: #676b76
+      span
+        max-width: 125px
+        +to
+
+      .msg-count
+        position: absolute
+        z-index: 3
+        right: -25px
+        top: 0
+        width: 17px
+        height: 17px
+        line-height: 18px
+        text-align: center
+        color: #858799
+        font-size: 12px
+        font-weight: 700
+        background-color: #d4d6e4
+        +border-radius(3px)
+        &:after
+          right: 100%
+          top: 50%
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+          border-color: rgba(212, 214, 228, 0)
+          border-right-color: #d4d6e4
+          border-width: 3px
+          margin-top: -3px

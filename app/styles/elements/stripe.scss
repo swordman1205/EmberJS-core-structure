@@ -1,0 +1,46 @@
+.digest-stripe {
+  $line-count: 1;
+  $line-height: 2em;
+  $stripe-height: $line-count * $line-height;
+  $base-color: #262626;
+
+  position: relative;
+  background: #FFEEAA;
+  color: $base-color;
+  line-height: $line-height;
+  border-bottom: 1px dashed lighten($base-color, 65%);
+
+  p {
+    margin: 0 $line-height;
+  }
+
+  .stripe-icon, .stripe-close-btn {
+    position: absolute;
+    top: 0;
+    width: $line-height;
+    line-height: 2.2em;
+    text-align: center;
+    vertical-align: middle;
+
+    &:before {
+      display: inline-block;
+      content: "";
+    }
+  }
+
+  .stripe-icon {
+    left: 0;
+
+    &:before {
+      //@extend .ico-notification-warning;
+    }
+  }
+
+  .stripe-close-btn {
+    right: 0;
+
+    &:before {
+      //@extend .ico-stripe-close;
+    }
+  }
+}

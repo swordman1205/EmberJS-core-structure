@@ -1,0 +1,24 @@
+.msg
+  .msg-preview-list
+    // max-height: 615px
+    +box-shadow(-2px 1px 2px 0px rgba(200,203,220,0.7))
+    .ember-scroll
+      $d-summary-height: 84px
+      $top-space: $header-height + $widget-menu-height + $msg-pagination-height
+
+      height: calc(100vh - #{$top-space + $spacing-base})
+      min-height: $d-summary-height * 1
+      max-height: $d-summary-height * 10
+
+.msg-preview-list
+  &.main
+    position: absolute
+    top: 0
+    left: 0
+    padding-top: 40px
+    width: 320px
+    background-color: $color-bg
+    +border-radius(0 0 0 3px)
+    +box-sizing(border-box)
+    +media-below(900)
+      width: 225px

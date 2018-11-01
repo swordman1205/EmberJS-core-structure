@@ -1,0 +1,53 @@
+.search-results-title
+  position: relative
+  padding: 20px 15px 10px 55px
+  color: #62b8d1
+  font-size: 16px
+  line-height: 21px
+  font-weight: 500
+  text-transform: uppercase
+  border-bottom: 1px solid #eaecf2
+  +clear
+  &.orange
+    color: #f07a4f
+    .count
+      color: #eea58a
+
+  .ico-mail
+    top: 24px
+    left: 26px
+
+  .ico-contacts
+    @extend .ico-widget-preview
+
+  .ico-chat
+    @extend .ico-widget-chat_hov
+
+  .ico-calendar
+    @extend .ico-month_act
+
+  .ico
+    &.ico-contacts
+      top: 28px
+      left: 28px
+
+    &.ico-chat
+      top: 25px
+      left: 28px
+
+    &.ico-calendar
+      top: 22px
+      left: 28px
+
+  .ico-mycloud
+    top: 28px
+    left: 22px
+
+  .text
+    float: left
+    margin-right: 5px
+
+  .count
+    float: left
+    font-weight: 300
+    color: #9cc7d4

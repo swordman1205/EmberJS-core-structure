@@ -1,0 +1,15 @@
+<div class="modal-window-list">
+  <div class="ember-scroll h-a">
+    {{#each attachments as |attachment|}}
+      {{compose-attachment
+        name=attachment.name
+        type=attachment.format
+        size=attachment.size
+        isDone=attachment.isReady
+        delete="detach"}}
+    {{/each}}
+  </div>
+
+  {{! Uploader }}
+  {{document-picker action="attach"}}
+</div>

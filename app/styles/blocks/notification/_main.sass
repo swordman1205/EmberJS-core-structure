@@ -1,0 +1,107 @@
+.notification-msg-holder
+  position: fixed
+  z-index: 998
+  top: 0
+  left: 0
+  width: 100%
+  min-height: 49px
+  text-align: center
+  border-top: 1px solid #a6e4c1
+  &.warning
+    border-top: 1px solid #f6e8b2
+
+    .notification-msg
+      color: #8e8972
+      border: 1px solid #f6e8b2
+      border-top: 0
+      background-color: #fff9e5
+      &:after
+        @extend .ico-notification-warning
+
+  &.error
+    border-top: 1px solid #f5d0c3
+
+    .notification-msg
+      color: #948078
+      border: 1px solid #f5d0c3
+      border-top: 0
+      background-color: #fdf3ef
+      &:after
+        @extend .ico-notification-error
+
+  &.encryption
+    border-top: 1px solid #dcdfe9
+    &.done
+      .notification-msg
+        &:after
+          @extend .ico-encryption
+    .notification-msg
+      border: 1px solid #dcdee9
+      border-top: 0
+      color: #979daf
+      background-color: #edeffa
+      &:after
+        @extend .ico-decryption
+    .status-bar
+      background-color: #b0b4c4
+
+  &.decryption
+    border-top: 1px solid #dcdfe9
+    &.done
+      .notification-msg
+        &:after
+          @extend .ico-decryption
+    .notification-msg
+      border: 1px solid #dcdee9
+      border-top: 0
+      color: #979daf
+      background-color: #edeffa
+      &:after
+        @extend .ico-encryption
+    .status-bar
+      background-color: #b0b4c4
+
+  &.upload
+    .notification-msg
+      &:after
+        top: 50%
+        margin-top: -8px
+        width: 16px
+        height: 16px
+        background: url("/images/site/loader.gif")
+
+  .notification-msg
+    display: inline-block
+    position: relative
+    padding: 13px 20px 15px 40px
+    border: 1px solid #a6e4c1
+    border-top: 0
+    color: #748a7e
+    font-size: 14px
+    line-height: 21px
+    background-color: #e5fbef
+    +border-radius(0 0 3px 3px)
+    &:after
+      position: absolute
+      content: ""
+      top: 50%
+      left: 15px
+      margin-top: -8px
+      @extend .ico-notification-success
+
+  .status-bar
+    position: absolute
+    left: 0
+    bottom: -1px
+    height: 3px
+    background-color: #aae5c5
+
+  .ico-decryption
+    top: 50%
+    left: 12px
+    margin-top: -9px
+
+  .ico-encryption
+    top: 50%
+    left: 18px
+    margin-top: -9px

@@ -1,0 +1,34 @@
+{{! Paging }}
+<div class="msg-pagination">
+  {{#if total}}
+    <p class="msg-pagination-text">
+      <span class="current-page">{{firstOnPage}}-{{lastOnPage}}</span>
+      <span class="sep">of</span>
+      <span class="total-page">{{total}}</span>
+    </p>
+
+    <div class="msg-pagination-actions">
+      {{#unless isFirstPage}}
+        <a href="javascript:void(0)" class="msg-pagination-link prev-link " {{action "prevPage"}}>Newer</a>
+      {{/unless}}
+
+      {{#unless isLastPage}}
+        <a href="javascript:void(0)" class="msg-pagination-link next-link " {{action "nextPage"}}>Older</a>
+      {{/unless}}
+    </div>
+  {{/if}}
+</div>
+
+{{! Summary list }}
+<div class="ember-scroll">
+  <ul>
+    {{#each filteredContent as |item index|}}
+      <li>
+          {{discussion-summary
+            model=item
+            hubType=hubType
+            ctrl=ctrl}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

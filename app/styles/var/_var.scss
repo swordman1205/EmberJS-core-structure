@@ -1,0 +1,82 @@
+$path: "/images/";
+$img-path: "../images/site/";
+$tmp-path: "/images/site/tmp";
+
+$mwidth: 1230px;
+
+$color-bg       : #f3f4f9;
+$color-base     : #434343;
+$color-aux      : lighten($color-base, 22%);
+$color-success  : #48c27e;
+$color-failure  : #f25749;
+
+$spacing-base: 15px;
+$spacing-small: 5px;
+
+$line-height-base: 40px;
+
+$header-padding-top: 25px;
+$header-padding-bottom: 17px;
+$header-content-height: $line-height-base;
+
+$header-height: $header-padding-top + $header-padding-bottom + $header-content-height;
+
+$widget-menu-height: 58px;
+
+/* --------------------
+ * Chat
+ * -------------------- */
+
+// Header
+$chat-header-padding-y    : 17px;
+$chat-header-line-height  : 21px;
+$chat-header-height       : $chat-header-line-height + 2 * $chat-header-padding-y;
+
+// Textarea
+$chat-textarea-height     : 70px;
+$color-gray : gray;
+$color-border : #a6a6a6;
+
+
+// Modals
+$white: 			 #fff !default;
+$black:				 #000 !default;
+$gray-lighter:			 #eceeef !default;
+$border-width:			 1px !default;
+$border-radius-lg:		 .3rem !default;
+$zindex-modal-backdrop:          1040 !default;
+$zindex-modal: 			 1050 !default;
+$modal-inner-padding:         	 15px !default;
+
+$modal-dialog-margin:         	 10px !default;
+$modal-dialog-sm-up-margin-y: 	 30px !default;
+
+$modal-title-line-height:     	 $line-height-base !default;
+
+$modal-content-bg:               $white !default;
+$modal-content-border-color:     rgba($black,.2) !default;
+$modal-content-border-width:     $border-width !default;
+$modal-content-xs-box-shadow:    0 3px 9px rgba($black,.5) !default;
+$modal-content-sm-up-box-shadow: 0 5px 15px rgba($black,.5) !default;
+
+$modal-backdrop-bg:           	 $black !default;
+$modal-backdrop-opacity:      	 .5 !default;
+$modal-header-border-color:   	 $gray-lighter !default;
+$modal-footer-border-color:    	 $modal-header-border-color !default;
+$modal-header-border-width:   	 $modal-content-border-width !default;
+$modal-footer-border-width:   	 $modal-header-border-width !default;
+$modal-header-padding:        	 15px !default;
+
+$modal-lg:                    	 800px !default;
+$modal-md:                    	 500px !default;
+$modal-sm:                    	 300px !default;
+
+$modal-transition:            	 transform .3s ease-out !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

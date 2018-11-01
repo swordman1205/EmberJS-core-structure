@@ -1,0 +1,62 @@
+<form class="login-form" onsubmit={{action "submit"}}>
+  <p class="login-form-title">{{title}}</p>
+
+  {{#if errors.length}}
+    {{#each errors as |errorString|}}
+      <p class="error-msg">{{errorString}}</p>
+    {{/each}}
+  {{/if}}
+
+  {{validated-input
+    model           = this
+    value           = email
+    didValidate     = didValidate
+    additionalClass = "user-name"
+    valuePath       = "email"
+    placeholder     = "Email"
+    type            = "email"
+    label           = "Email"
+    disabled        = isLogged
+  }}
+
+  {{validated-input
+    model           = this
+    value           = password
+    didValidate     = didValidate
+    additionalClass = "user-password"
+    valuePath       = "password"
+    placeholder     = "Password"
+    type            = "password"
+    label           = "Password"
+    disabled        = isLogged
+  }}
+
+  <div class="login-form-actions">
+    <button type="submit" class="login-form-btn orange-btn" disabled={{submitButtonDisabled}}>
+      {{if attemptAuthTask.isRunning 'Logging in...' 'Log In'}}
+    </button>
+
+    <div class="login-form-sign {{if isPasswordRecommendations "clicked"}}">
+      <span class="login-form-btn-sign" {{action "togglePasswordRecommendations"}}>Have you protected your password?</span>
+      <div class="login-form-dropdown {{unless isPasswordRecommendations "hide"}}">
+        <p class="dropdown-title">Have you protected your password by nominating trusted friends ?</p>
+        <p class="dropdown-text">
+          Dekko does not store any passwords on the servers.
+          Once your password is lost we cannot retrieve it.
+          To mitigate this risk you can nominate trusted
+          friends to allow you to reset your password in
+          the future. To do this, login and go to your
+          contacts page and assign trusted friends.
+        </p>
+        <span class="dropdown-close" {{action "togglePasswordRecommendations"}}>Hide</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="external-link-container">
+    <div class="external-link-wr">
+      Do not have an account? {{link-to "Sign up" "signup" class="external-link"}}
+    </div>
+    <a href="http://www.dekkosecure.com" target="_blank" class="external-link">www.dekkosecure.com</a>
+  </div>
+</form>

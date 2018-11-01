@@ -1,0 +1,41 @@
+.msg-item
+  .msg-item-data
+    .msg-menu
+      +clear
+      .msg-menu-item
+        float: left
+        margin-right: 25px
+        &.event
+          .msg-menu-link
+            &:after
+              @extend .ico-msg-menu-clock
+        &.task
+          .msg-menu-link
+            &:after
+              @extend .ico-msg-menu-list
+        &.project
+          .msg-menu-link
+            &:after
+              top: 3px
+              @extend .ico-msg-menu-idea
+
+        .msg-menu-link
+          display: inline-block
+          position: relative
+          padding-left: 20px
+          color: #7f849a
+          font-weight: 500
+          font-size: 14px
+          line-height: 21px
+          cursor: pointer
+          &:hover
+            span
+              border-bottom: 1px solid #dcdde3
+          &:after
+            position: absolute
+            content: " "
+            top: 4px
+            left: 0
+
+          span
+            border-bottom: 1px solid transparent

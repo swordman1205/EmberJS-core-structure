@@ -1,0 +1,24 @@
+.input-group {
+  padding: $spacing-base;
+  border: 1px solid $color-aux;
+  outline: 0;
+
+  & + &,
+  & + .form-actions,
+  & + .data-row {
+    margin-top: $spacing-base;
+  }
+
+  .input-group-title {
+    color: $color-base;
+  }
+
+  .input-group-hint {
+    font-size: .9em;
+
+    .hint-title {
+      color: $color-base;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.file-view
+  position: absolute
+  z-index: 99
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #cdd1db
+
+  .file-view-box
+    padding: 18px 20px 14px 20px
+    background-color: #f3f4f9
+    border-bottom: 1px solid #e1e2eb
+    +clear
+
+    .file-view-name
+      float: left
+      margin-right: 5px
+      color: #7e8292
+      font-size: 24px
+      font-weight: 500
+
+    .file-view-info
+      float: left
+      color: #858799
+      font-size: 13px
+      line-height: 29px
+      font-weight: 300
+      span
+        font-weight: 500
+
+    .file-view-actions
+      float: right
+      padding-top: 5px
+
+    .ico-popup-file-cloud,
+    .ico-popup-file-print,
+    .ico-popup-close
+      float: left
+      cursor: pointer
+
+    .file-view-print
+      margin: 1px 15px 0 0
+      @extend .ico-popup-file-print
+    .file-view-cloud
+      margin: 1px 15px 0 0
+      @extend .ico-popup-file-cloud
+      +opacity(.5)
+    .file-view-close
+      @extend .ico-popup-close
+      +opacity(.5)
+
+  .file-view-download
+    padding: 16px 20px
+    position: relative
+    color: #fbfbff
+    font-size: 12px
+    line-height: 20px
+    background-color: #b4b8c5
+    +clear
+    &:before
+      position: absolute
+      content: ""
+      bottom: 1px
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #a7acb8
+    .file-view-text
+      float: left
+      position: relative
+      padding-left: 30px
+      &:after
+        position: absolute
+        content: ""
+        top: 3px
+        left: 0
+        @extend .ico-computer
+
+    .file-view-link
+      float: right
+      padding-left: 20px
+      position: relative
+      color: #fbfbff
+      font-size: 16px
+      line-height: 20px
+      cursor: pointer
+      &:after
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        @extend .ico-file-attachments_white
+
+  .file-view-data
+    text-align: center
+    padding: 50px
+    img
+      display: inline-block
+      vertical-align: middle

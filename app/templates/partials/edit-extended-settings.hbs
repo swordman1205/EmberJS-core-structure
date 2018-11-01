@@ -1,0 +1,29 @@
+﻿<div class="popup-modal-data">
+    <label class="input-holder">
+        <span class="input-holder-label-text">Email</span>
+        {{input type="email" class="popup-modal-input" value=model.email}}
+    </label>
+    <label class="input-holder">
+        <span class="input-holder-label-text">Phone</span>
+        {{input type="text" class="popup-modal-input" value=model.phone}}
+    </label>
+    <label class="input-holder">
+        <span class="input-holder-label-text">Company Name</span>
+        {{input type="text" class="popup-modal-input" value=model.companyName}}
+    </label>
+
+    <label class="input-holder">
+        <span class="input-holder-label-text">Company Website</span>
+        {{input type="text" class="popup-modal-input" value=model.companyWebsite}}
+    </label>
+
+    <div class="input-holder user-name">
+        <span class="input-holder-label-text">Country</span>
+        {{dekko-select class="popup-modal-input" model=countriesList value=model.country onSelect=(action 'changeCountry')}}
+        {{!-- {{view Ember.Select class="popup-modal-input" id="country" content=App.countriesList value=country}} --}}
+    </div>
+    <div class="popup-modal-actions flr">
+        <button class="popup-btn s-blue-btn" {{action 'close'}}>Cancel</button>
+        <button class="popup-btn blue-btn" {{action 'save'}}>Save</button>
+    </div>
+</div>

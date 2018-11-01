@@ -1,0 +1,41 @@
+.widget-list
+  .widget-preview
+    +box-shadow(0 1px 4px #c8cbdc)
+    +border-radius(3px)
+  .widget-box
+    min-height: $widget-menu-height
+    padding: 0 20px
+    background-color: #fcfbff
+    border-bottom: 1px solid #d7d9e3
+    +border-radius(3px 3px 0 0)
+    +clear
+
+    .widget-preview-link
+      float: left
+      position: relative
+      padding: 21px 0 16px 25px
+      color: #62b8d1
+      font-size: 18px
+      font-weight: 700
+      text-transform: uppercase
+      &:visited,
+      &:link,
+      &.MsoHyperlink,
+      &.MsoHyperlinkFollowed
+        color: #62b8d1
+
+    .ico-widget-preview
+      top: 50%
+      left: 0
+      margin-top: -6px
+
+    .ico-month
+      top: 50%
+      left: 0
+      margin-top: -6px
+      @extend .ico-month_act
+
+    .ico-mycloud
+      top: 50%
+      left: -6px
+      margin-top: -7px

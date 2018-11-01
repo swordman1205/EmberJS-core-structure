@@ -1,0 +1,23 @@
+.domain-settings {
+  width: 400px;
+  color: #858799;
+
+  .ds-user-table {
+    $col-widths: (20%, 20%, 60%);
+
+    width: 100%;
+
+    td, th {
+      @for $col from 1 through length($col-widths) {
+        &:nth-child(#{$col}) {
+          width: nth($col-widths, $col);
+        }
+      }
+    }
+  }
+
+  .ds-user-scroll {
+    overflow-y: auto;
+    max-height: 150px;
+  }
+}

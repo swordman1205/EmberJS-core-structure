@@ -1,0 +1,71 @@
+.msg-pagination
+  $msg-pagination-height: $line-height-base !global
+
+  position: absolute
+  top: 0
+  left: 0
+  padding: 0 15px
+  width: 100%
+  height: $msg-pagination-height
+  background-color: #fcfcff
+  border-right: 1px solid #e9eaf1
+  border-bottom: 1px solid #e9eaf1
+  +box-sizing(border-box)
+  +clear
+
+  .msg-pagination-text
+    float: left
+    font-size: 14px
+    color: $color-gray
+    font-weight: 500
+    line-height: 39px
+
+    span
+      float: left
+
+    .sep
+      margin: 0 3px
+      font-weight: 300
+
+  .msg-pagination-actions
+    float: right
+
+    .msg-pagination-link
+      float: left
+      position: relative
+      margin-left: 15px
+      padding-left: 12px
+      color: $color-gray
+      font-size: 14px
+      line-height: 39px
+      +media-below(900)
+        padding: 0 10px
+        margin: 0 0 0 5px
+        width: 20px
+        height: 100%
+        +box-sizing(border-box)
+        +ti
+
+      &:after
+        position: absolute
+        content: ""
+        top: 50%
+        left: 0
+        margin-top: -4px
+        +media-below(900)
+          left: 10px
+      &.prev-link
+        &:after
+          @extend .ico-prev-arrow
+      &.next-link
+        padding-left: 0
+        padding-right: 15px
+        &:after
+          left: auto
+          right: 0
+          @extend .ico-next-arrow
+      &:hover
+        +opacity(0.8)
+      &.disabled
+        cursor: default
+        +opacity(0.5)

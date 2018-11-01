@@ -1,0 +1,47 @@
+.widget,
+.widget-preview
+  .widget-menu
+    &:first-child
+      .widget-menu-link
+        +border-radius(3px 0 0 0)
+  .widget-menu
+    .widget-menu-item
+      .widget-menu-link
+        float: left
+        position: relative
+        margin-bottom: -1px
+        padding: 19px 20px 18px 45px
+        text-transform: uppercase
+        font-size: 18px
+        line-height: 21px
+        color: #808499
+        font-weight: 700
+        border-right: 1px solid #e9eaf1
+        border-bottom: 1px solid #d7d9e3
+        +box-sizing(border-box)
+        &:hover
+          color: #EF764C
+          .ico-widget-inbox
+            @extend .ico-widget-inbox_hov
+          .ico-widget-sent
+            @extend .ico-widget-sent_hov
+          .ico-widget-draft
+            @extend .ico-widget-draft_hov
+          .ico-widget-chat
+            @extend .ico-widget-chat_hov
+          .ico-agenda
+            @extend .ico-agenda_act
+          .ico-month
+            @extend .ico-month_act
+          .ico-week
+            @extend .ico-week_act
+          .widget-menu-count
+            color: #f3b69f
+            border: 1px solid #f3b69f
+            &:before
+              content: ""
+              color: #f3b69f
+              border-right-color: #f3b69f
+
+        span
+          float: left

@@ -1,0 +1,4 @@
+<button class="btn btn-primary" type="submit" disabled={{isDisabled}}>{{submitText}}</button>
+{{#if isCloseable}}
+  {{link-to 'Cancel' (modal-params)}}
+{{/if}}

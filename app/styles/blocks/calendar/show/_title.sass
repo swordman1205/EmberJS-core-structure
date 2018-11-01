@@ -1,0 +1,18 @@
+.calendar-day-title
+  display: table
+  width: 100%
+  min-height: 50px
+  border-bottom: 1px solid #e2e3ea
+  +box-sizing(border-box)
+
+  .calendar-day-val
+    display: table-cell
+    $width: 100%
+    width: $width / 7
+    height: 100%
+    text-align: center
+    vertical-align: middle
+    color: #b8bac9
+    font-size: 14px
+    font-weight: 500
+    +text-shadow(0 1px 0 #fff)

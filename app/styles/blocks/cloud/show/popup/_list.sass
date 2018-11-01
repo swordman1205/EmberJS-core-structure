@@ -1,0 +1,39 @@
+.cloud-modal-data
+  .cloud-uploaded-list
+    margin-bottom: 20px
+    .uploaded-item
+      position: relative
+      margin-bottom: 5px
+      padding: 10px 40px 10px 34px
+      border: 1px solid #d7d9e3
+      background-color: #fff
+      +clear
+      &.done
+        &:before
+          content: " "
+      &:before
+        position: absolute
+        top: 10px
+        right: 10px
+        @extend .ico-upload-done
+
+      .ico-cloud-file
+        top: 10px
+        left: 10px
+
+      .file-name
+        float: left
+        width: 50%
+        color: #858799
+        font-size: 14px
+        span
+          color: #aaadc2
+
+      .file-path
+        float: left
+        width: 50%
+        color: #61b7d1
+        font-size: 14px
+        a
+          color: #61b7d1
+          font-size: 14px

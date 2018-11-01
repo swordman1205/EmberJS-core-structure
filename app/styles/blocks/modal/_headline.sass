@@ -1,0 +1,46 @@
+.modal-window
+  .modal-window-headline
+    position: relative
+    padding: 15px 150px 13px 20px
+    color: #fff
+    font-size: 18px
+    line-height: 23px
+    font-weight: bold
+    text-transform: uppercase
+    background-color: #f07a4f
+    +border-radius(3px 3px 0 0)
+    +clear
+    .headline-text
+      float: left
+
+    .full-screen-btn
+      position: absolute
+      top: 0
+      right: 51px
+      width: 30px
+      height: 51px
+      cursor: pointer
+      &:after
+        position: absolute
+        content: ''
+        top: 50%
+        left: 50%
+        margin-top: -10px
+        margin-left: -9px
+        @extend .ico-modal-full
+
+    .modal-window-close
+      position: absolute
+      top: 0
+      right: 0
+      width: 51px
+      height: 51px
+      cursor: pointer
+      &:after
+        position: absolute
+        content: ''
+        top: 50%
+        left: 50%
+        margin-top: -10px
+        margin-left: -10px
+        @extend .ico-msg-close

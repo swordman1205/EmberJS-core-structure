@@ -1,0 +1,54 @@
+.contacts-list
+  position: relative
+  &.view
+    .contacts-list-box
+      float: left
+      width: 50%
+
+    .contact-actions
+      display: none
+
+    .contact-view
+      display: block
+
+    .contact-preview
+      &.in-view
+        background-color: #f3f4f9
+
+.contact-view
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+  padding: 10px 20px
+  width: 50%
+  height: 100%
+  min-height: 300px
+  background-color: #f3f4f9
+  z-index: 2
+  +box-sizing(border-box)
+  &.edit
+    .contact-view-content
+      display: none
+    .contact-view-edit
+      display: block
+
+.contact-view-data
+  margin-bottom: 5px
+  min-height: 130px
+  +clear
+
+  .contact-view-data-text
+    margin-bottom: 20px
+    color: #7f8293
+    font-size: 14px
+    line-height: 21px
+    font-weight: 100
+
+.contact-view-edit
+  .input-holder
+    width: auto
+
+.contacts-list-box
+  height: auto
+  min-height: 500px

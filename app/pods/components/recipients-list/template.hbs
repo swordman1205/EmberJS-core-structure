@@ -1,0 +1,21 @@
+{{#if hasRecipients}}
+  <p class="recipient-list">
+    {{#if name}}
+      <span>{{name}}</span>
+    {{/if}}
+
+    {{#each mainRecipients as |recipient|}}
+      {{recipients-list-item recipient=recipient deliveries=deliveries}}
+    {{/each}}
+
+    {{#if allRecipientsAreShown}}
+      {{#each otherRecipients as |recipient|}}
+        {{recipients-list-item  recipient=recipient deliveries=deliveries}}
+      {{/each}}
+    {{/if}}
+
+    {{#unless allRecipientsAreShown}}
+      <a href="#" {{action "showAllRecipients" bubbles=false}}>Other members</a>
+    {{/unless}}
+  </p>
+{{/if}}

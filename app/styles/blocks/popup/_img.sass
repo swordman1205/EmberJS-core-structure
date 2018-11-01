@@ -1,0 +1,58 @@
+.popup-img
+  position: absolute
+  z-index: 999
+  top: 50px
+  left: 50%
+  margin-left: -325px
+  width: 650px
+  min-height: 325px
+  background-color: #dde5f3
+  +border-radius(3px)
+  +box-shadow(0 1px 3px #343942, inset 0 1px 0 #e3ebf8)
+
+  .popup-box
+    padding: 13px 15px
+    +clear
+
+    .file-name
+      float: left
+      color: #646c79
+      font-size: 16px
+
+    .popup-img-actions
+      float: right
+
+      .ico-popup-file-cloud,
+      .ico-popup-file-attach,
+      .ico-popup-close
+        display: block
+        cursor: pointer
+
+      .popup-file-cloud
+        float: left
+        margin: 2px 15px 0 0
+        @extend .ico-popup-file-cloud
+      .popup-file-attach
+        float: left
+        margin: 0 15px 0 0
+        @extend .ico-popup-file-attach
+      .popup-close
+        float: left
+        @extend .ico-popup-close
+
+  .popup-data
+    display: table
+    width: 100%
+    height: 100%
+    min-height: 325px
+    .popup-data-box
+      display: table-cell
+      width: 100%
+      height: 100%
+      text-align: center
+      vertical-align: middle
+      overflow: hidden
+      +border-radius( 0 0 3px 3px)
+      img
+        display: inline-block
+        vertical-align: middle

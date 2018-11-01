@@ -1,0 +1,45 @@
+.contact-view
+  .contact-view-headline
+    margin-bottom: 20px
+    padding: 10px 0 20px 0
+    border-bottom: 1px solid #e1e2eb
+    +clear
+
+    .contact-name
+      float: left
+      color: $color-base
+      font-size: 24px
+
+    .headline-actions
+      float: right
+      padding-top: 8px
+
+      .contact-view-btn
+        float: left
+        position: relative
+        padding-left: 20px
+        color: $color-gray
+        font-size: 14px
+        font-weight: 500
+        cursor: pointer
+        &:after
+          position: absolute
+          content: ""
+          top: 1px
+          left: 0
+          @extend .ico-contact-edit
+
+      .contact-view-close
+        float: left
+        position: relative
+        margin-left: 20px
+        padding-left: 20px
+        font-size: 14px
+        color: $color-gray
+        cursor: pointer
+        &:after
+          position: absolute
+          content: ""
+          top: 3px
+          left: 0
+          @extend .ico-contact-close

@@ -1,0 +1,38 @@
+.msg-preview-list
+
+  .msg-link
+    display: block
+    padding: 20px 25px 15px 15px
+    overflow: hidden
+
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 5px
+      background-color: #ef7a4f
+    &.active
+      background-color: #fff
+      &:before
+        content: ""
+
+  .msg-preview
+    position: relative
+    width: 100%
+    background-color: $color-bg
+    border-bottom: 1px solid #e1e3ec
+    cursor: pointer
+    +box-sizing(border-box)
+    +clear
+    +media-below(900)
+      padding: 20px 10px 15px 10px
+    &.is-checked
+      background-color: #fff7e3
+    &.new
+      background-color: #fff
+      .msg-preview-author
+        font-weight: 500
+      .msg-preview-topic
+        color: #555862
+        font-weight: 700

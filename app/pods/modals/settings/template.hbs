@@ -1,0 +1,28 @@
+<div class="popup-modal-wrap">
+  <div class="popup-modal">
+    <div class="modal-header">
+      <h4 class="modal-title">Settings</h4>
+
+      <a href="#" {{action 'close'}} class="close">
+        <span aria-hidden="true">×</span>
+      </a>
+    </div>
+
+    {{#if application.model.isDomainOwner}}
+      <div class="popup-modal-data" style="padding-bottom:0">
+        <button class={{if isBasicSettings 'blue-btn' 's-blue-btn'}} {{action "changeEdit"}}>Settings</button>
+        <button class={{if isBasicSettings 's-blue-btn' 'blue-btn'}} {{action "changeEdit"}}>Contact Information</button>
+      </div>
+    {{/if}}
+
+    {{#if application.model.isDomainOwner}}
+      {{#if isBasicSettings}}
+          {{partial "partials/editSettings"}}
+      {{else}}
+          {{partial "partials/editExtendedSettings"}}
+      {{/if}}
+    {{else}}
+      {{partial "partials/editSettings"}}
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,244 @@
+.chat-modal-box
+  .chat-modal-msg-new
+    display: none
+
+  &.clicked
+    .chat-modal-dd
+      display: block
+      right: 60px
+    .chat-modal-btn
+      content: ""
+
+  .chat-modal-btn
+    position: relative
+    display: block
+    margin: 10px -10px -10px -10px
+    width: 61px
+    height: 55px
+    line-height: 55px
+    text-align: center
+    color: #aeb3c7
+    font-size: 14px
+    cursor: pointer
+    border-top: 1px solid #e4e3eb
+    &:before
+      right: 54px
+      bottom: 17px
+      z-index: 1
+      border: solid transparent
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(243, 244, 249, 0)
+      border-left-color: #f3f4f9
+      border-width: 8px
+      margin-top: -8px
+    &:hover
+      color: #7f8399
+      span
+        &:after
+          @extend .ico-chat-user_hov
+    span
+      display: inline-block
+      position: relative
+      padding-left: 20px
+      height: 100%
+      &:after
+        position: absolute
+        content: ""
+        top: 18px
+        left: 0
+        @extend .ico-chat-user
+
+.chat-modal
+  &.collapse-y
+    height: 0 !important
+
+  .chat-modal-nav
+    .chat-modal-dd
+      .chat-modal-list
+        max-height: 350px
+        background-color: #f3f4f9
+
+      .user-preview
+        cursor: pointer
+        width: auto
+        margin-bottom: 0
+        padding: 10px 20px
+        border-bottom: 1px solid #e1e3ec
+        +clear
+        &:after
+          display: none
+        &.online
+          color: #48c27e
+          &:after
+            background-color: #48c27e
+        &.away
+          color: #c8a302
+          &:after
+            background-color: #c8a302
+        &.no-disturb
+          color: #ef3631
+          &:after
+            background-color: #ef3631
+        &.invisible
+          color: #a6abc0
+          &:after
+            background-color: #a6abc0
+
+        .user-preview-img
+          float: left
+          margin-right: 10px
+          img
+            +border-radius(50%)
+
+        .user-preview-box
+          float: left
+          max-width: 180px
+
+        .user-name
+          font-size: 14px
+          line-height: 19px
+          font-weight: 500
+          color: #868899
+
+        .user-status
+          position: relative
+          display: inline-block
+          padding-left: 12px
+          color: #b4b6c0
+          font-size: 14px
+          font-weight: 300
+          line-height: 19px
+          &:after
+            position: absolute
+            top: 8px
+            left: 0
+            width: 6px
+            height: 6px
+            content: ""
+            background-color: #b4b6c0
+            +border-radius(50%)
+
+  .chat-modal-dd
+    +stretch()
+    display: none
+    width: 320px
+    padding-right: 2px
+    background-color: #f3f4f9
+    +box-shadow(0 1px 4px #c8cbdc)
+    +border-radius(3px)
+    &.show
+      display: block
+    &.hide-content
+      display: block
+
+      .chat-modal-actions
+        .chat-modal-hide
+          &:after
+            top: 18px
+            @extend .ico-chat-modal-show
+      .chat-modal-msg,
+      .chat-modal-msg-new
+        display: none
+
+    .chat-modal-headline
+      position: relative
+      margin-right: -2px
+      padding: 17px 125px 17px 20px
+      color: #fff
+      font-size: 17px
+      line-height: 21px
+      font-weight: 500
+      background-color: #f07a50
+      +border-radius(3px 3px 0 0)
+
+    .chat-modal-actions
+      position: absolute
+      top: 0
+      right: 0
+      height: 55px
+      i
+        margin-right: 10px
+
+      .chat-modal-settings
+        float: left
+        position: relative
+        cursor: pointer
+        padding: 0 4px
+        width: 10px
+        height: 55px
+        &:after
+          position: absolute
+          content: " "
+          top: 50%
+          left: 50%
+          margin-top: -7px
+          margin-left: -7px
+          @extend .ico-chat-modal-settings
+
+      .chat-modal-hide
+        float: left
+        position: relative
+        padding: 0 4px
+        width: 10px
+        height: 55px
+        cursor: pointer
+        &:after
+          position: absolute
+          content: ""
+          top: 50%
+          left: 50%
+          margin-left: -6px
+          margin-top: 4px
+          @extend .ico-chat-modal-hide
+
+      .chat-modal-resize
+        float: left
+        position: relative
+        padding: 0 4px
+        width: 10px
+        height: 55px
+        cursor: pointer
+        &:after
+          position: absolute
+          content: ""
+          top: 50%
+          left: 50%
+          margin-top: -6px
+          margin-left: -6px
+          @extend .ico-chat-modal-resize
+
+      .chat-modal-close
+        float: left
+        position: relative
+        top: 0
+        left: 0
+        cursor: pointer
+        padding: 0 4px
+        width: 10px
+        height: 55px
+        &:after
+          position: absolute
+          content: ""
+          top: 50%
+          left: 50%
+          margin-top: -6px
+          margin-left: -6px
+          @extend .ico-chat-modal-close
+
+    .chat-modal-close
+      position: absolute
+      top: 22px
+      right: 18px
+      cursor: pointer
+      padding: 0 4px
+      width: 10px
+      height: 55px
+      &:after
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        @extend .ico-chat-modal-close

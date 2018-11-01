@@ -1,0 +1,106 @@
+.contacts-search-headline
+  padding: 10px 0
+  border-bottom: 1px solid #e1e3ec
+  +box-sizing(border-box)
+  +clear
+
+  .contacts-search-title
+    float: left
+    color: #7e8292
+    font-size: 16px
+    line-height: 21px
+
+  .contacts-search-result
+    float: right
+    color: #7e8292
+    font-size: 14px
+    line-height: 21px
+
+.contact-search-results
+  margin-bottom: 10px
+
+.contact-search-item
+  padding: 15px 0
+  border-bottom: 1px solid #e5e7f0
+  +clear
+  &.added
+    .add-user-status
+      display: block
+    .add-user-btn
+      display: none
+  .search-user-img
+    float: left
+    margin-right: 15px
+    img
+      +border-radius(50%)
+
+  .search-user-box
+    float: left
+    display: table
+    max-width: 300px
+    min-height: 40px
+
+  .search-user-holder
+    display: table-cell
+    width: 100%
+    height: 100%
+    color: #7f8193
+    font-size: 16px
+    vertical-align: middle
+
+  .search-user-position
+    margin-top: 5px
+    font-size: 13px
+    font-weight: 300
+
+  .search-user-actions
+    float: right
+    padding-top: 5px
+
+  .add-user-status
+    display: none
+    position: relative
+    padding-left: 23px
+    color: #47c17d
+    font-size: 15px
+    line-height: 17px
+    &:after
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      @extend .ico-add-user
+
+  .ico-plus
+    top: 10px
+    left: 10px
+
+  .add-user-btn
+    padding: 0 15px 0 25px
+    &:hover
+      .ico-plus
+        @extend .ico-plus_hov
+
+  .search-user-dd
+    margin-top: 15px
+    margin-bottom: -20px
+    +clear
+    .form-box
+      float: left
+      .form-label
+        width: 75px
+        color: #798da5
+        font-size: 15px
+        line-height: 32px
+        font-weight: 500
+      .select2-container
+        width: 200px
+        .select2-choices
+          padding: 0
+
+    .search-user-actions
+      padding-top: 0
+      .cancel-btn
+        margin-left: 15px
+      .save-btn
+        margin-left: 15px

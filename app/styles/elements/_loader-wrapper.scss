@@ -1,0 +1,11 @@
+.loader-wrapper {
+  text-align: center;
+  height: 100%;
+
+  &:before {
+    display: inline-block;
+    height: 100%;
+    content: "";
+    vertical-align: middle;
+  }
+}

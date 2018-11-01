@@ -1,0 +1,30 @@
+.widget,
+.widget-preview
+  .widget-menu
+    float: left
+    margin-right: 10px
+    .widget-menu-item
+      float: left
+
+.widget-list
+  .widget-preview
+    .widget-menu
+      margin-left: -20px
+      .widget-menu-item
+        margin-right: 0
+        .widget-menu-link
+          margin: 0
+          border: 0
+          padding: 20px 35px 16px 45px
+          span
+            color: #EF764C
+          .ico-widget-inbox
+            @extend .ico-widget-inbox_hov
+          .widget-menu-count
+            right: 0
+            color: #ef794f
+            border: 1px solid #ef794f
+            &:before
+              content: ""
+              color: #ef794f
+              border-right-color: #ef794f

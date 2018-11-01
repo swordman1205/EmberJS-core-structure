@@ -1,0 +1,51 @@
+.contact-view-box
+  float: left
+  .contact-view-btn
+    margin-bottom: 13px
+    +clear
+    .btn-label
+      float: left
+      min-width: 90px
+      margin-right: 20px
+      padding-left: 20px
+      position: relative
+      color: $color-base
+      font-size: 14px
+      line-height: 30px
+      .ico
+        top: 50%
+        left: 0
+      .ico-favorite-user
+        margin-top: -5px
+      .ico-confirmed-user
+        margin-top: -6px
+      .ico-tags-user
+        margin-top: -6px
+    .btn-toggle
+      float: left
+
+      &.disabled > span
+        color: #c3c3cf !important
+
+      span
+        float: left
+        padding: 0 5px
+        min-width: 42px
+        height: 30px
+        margin-left: -1px
+        line-height: 28px
+        border: 1px solid #dadce6
+        color: $color-gray
+        font-size: 14px
+        text-align: center
+        cursor: pointer
+        background-color: #f3f3f9
+        +border-radius(3px 0 0 3px)
+        +box-sizing(border-box)
+        &.last
+          border-left: 1px solid transparent
+          +border-radius(0 3px 3px 0)
+        &.active
+          cursor: default
+          color: #4797df
+          background-color: #fff

@@ -1,0 +1,53 @@
+.chat
+  .chat-msg
+    position: relative
+    margin-bottom: 20px
+    padding: 0 110px 0 60px
+
+    .user-img
+      position: absolute
+      top: 0
+      left: 0
+      width: 40px
+      height: 40px
+      +border-radius(50%)
+
+      img
+        display: inline-block
+        width: 100%
+        height: 100%
+        vertical-align: middle
+        +border-radius(50%)
+
+    .user-name
+      color: #7f8399
+      font-size: 14px
+      line-height: 21px
+      font-weight: 700
+
+    .user-msg-text
+      color: #666b76
+      font-size: 14px
+      line-height: 21px
+      p
+        margin-bottom: 10px
+
+    .chat-msg-date
+      position: absolute
+      top: 0
+      right: 0
+      color: #abb0c1
+      font-size: 13px
+      font-weight: 300
+
+    .ico-user-chat-status,
+    .ico-user-chat-status
+      position: absolute
+      z-index: 3
+      bottom: -3px
+      right: 4px
+
+    .user-status
+      @extend .ico-user-chat-status
+      &.offline
+        @extend .ico-user-chat-status_offline

@@ -1,0 +1,84 @@
+<form class="login-form" onsubmit={{action "submit"}}>
+  {{#if isRegistered}}
+    <div class="text-center registered-success">
+      <span>An email has been sent. Please check your inbox and verify your email.</span>
+    </div>
+  {{/if}}
+
+  <p class="login-form-title">{{title}}</p>
+
+  {{#if errors.length}}
+    {{#each errors as |errorString|}}
+      <p class="error-msg">{{errorString}}</p>
+    {{/each}}
+  {{/if}}
+
+  {{validated-input
+    model           = this
+    value           = fullName
+    didValidate     = didValidate
+    additionalClass = "user-name"
+    valuePath       = "fullName"
+    placeholder     = "Full name"
+    type            = "text"
+    label           = "Full name"
+    disabled        = isRegistered
+  }}
+
+  {{validated-input
+    model           = this
+    value           = email
+    didValidate     = didValidate
+    additionalClass = "user-name"
+    valuePath       = "email"
+    placeholder     = "Email"
+    type            = "email"
+    label           = "Email"
+    disabled        = isRegistered
+  }}
+
+  {{validated-input
+    model           = this
+    value           = password
+    didValidate     = didValidate
+    additionalClass = "user-password"
+    valuePath       = "password"
+    placeholder     = "Password"
+    type            = "password"
+    label           = "Password"
+    disabled        = isRegistered
+  }}
+
+  {{validated-input
+    model           = this
+    value           = confirmPassword
+    didValidate     = didValidate
+    additionalClass = "user-password-confirm"
+    valuePath       = "confirmPassword"
+    placeholder     = "Confirm password"
+    type            = "password"
+    label           = "Confirm password"
+    disabled        = isRegistered
+  }}
+
+  <div class="login-form-actions">
+    <button
+      class="login-form-btn orange-btn"
+      disabled={{submitButtonDisabled}}
+    >
+      {{if attemptRegisterTask.isRunning 'Registration...' 'Registration'}}
+    </button>
+
+    <div class="login-form-sign">
+      <span class="login-form-btn-sign" {{action "reset"}}>Reset all fields</span>
+    </div>
+  </div>
+
+  <div class="external-link-container">
+    <div class="external-link-wr">
+      Already have an account? {{link-to "Sign in" "login" class="external-link"}}
+    </div>
+
+    <a href="http://www.dekkosecure.com" target="_blank" class="external-link">www.dekkosecure.com</a>
+  </div>
+</form>

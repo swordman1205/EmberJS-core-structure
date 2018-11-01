@@ -1,0 +1,70 @@
+.widget
+  .widget-box
+    min-height: 58px
+    background-color: #fcfbff
+    border-bottom: 1px solid #d7d9e3
+    +border-radius(3px 3px 0 0)
+    +clear
+
+    .widget-headline
+      color: #61b7d1
+      +clear
+
+      .widget-back-link
+        float: left
+        position: relative
+        padding: 20px 15px 17px 40px
+        color: #babbc5
+        font-size: 15px
+        line-height: 21px
+        font-weight: 500
+        &:after
+          position: absolute
+          content: ""
+          top: 50%
+          left: 20px
+          margin-top: -3px
+          @extend .ico-search-back
+
+  .widget-content
+    +clear
+
+  .widget-title
+    float: left
+    margin-right: 20px
+    padding-left: 20px
+    font-size: 26px
+    line-height: 58px
+    font-weight: bold
+    letter-spacing: 1px
+    color: #ef794f
+
+  .widget-preview
+    +box-shadow(0 1px 4px #c8cbdc)
+    +border-radius(3px)
+
+  .widget-preview-link
+    float: left
+    position: relative
+    margin-left: 20px
+    padding: 21px 0 16px 25px
+    color: #62b8d1
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+
+  .ico-widget-preview
+    top: 50%
+    left: 0
+    margin-top: -6px
+
+  .ico-month
+    top: 50%
+    left: 0
+    margin-top: -6px
+    @extend .ico-month_act
+
+  .ico-mycloud
+    top: 50%
+    left: -6px
+    margin-top: -7px

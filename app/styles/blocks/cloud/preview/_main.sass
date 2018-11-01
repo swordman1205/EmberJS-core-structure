@@ -1,0 +1,31 @@
+.widget-preview
+
+  .cloud-file-list
+    background-color: #fff
+    height: 350px
+
+  .cloud-file-preview
+    display: block
+    position: relative
+    padding: 17px 15px 17px 50px
+    color: $color-base
+    font-size: 15px
+    border-bottom: 1px solid #eeeff1
+    &:before
+      content: ""
+      position: absolute
+      top: 17px
+      left: 20px
+      @extend .ico-cloud-file
+    +clear
+
+  .text
+    float: left
+    max-width: 130px
+    +to
+
+  .upload-date
+    float: right
+    max-width: 115px
+    color: $color-gray
+    font-size: 14px

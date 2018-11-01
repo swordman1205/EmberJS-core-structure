@@ -1,0 +1,46 @@
+.contact-preview
+
+  .contact-preview-box
+    float: left
+    max-width: 180px
+
+  .contact-name
+    color: $color-base
+    font-size: 14px
+    line-height: 19px
+    font-weight: 500
+
+
+.contact-status
+  position: relative
+  display: inline-block
+  padding-left: 18px
+  color: $color-gray
+  font-size: 14px
+  font-weight: 300
+  line-height: 19px
+  &:after
+    position: absolute
+    top: 4px
+    left: 0
+    width: 12px
+    height: 12px
+    content: ""
+    background-color: #b4b6c0
+    +border-radius(50%)
+  &.online
+    color: #48c27e
+    &:after
+      background-color: #48c27e
+  &.away
+    color: #c8a302
+    &:after
+      background-color: #c8a302
+  &.no-disturb
+    color: #ef3631
+    &:after
+      background-color: #ef3631
+  &.invisible
+    color: #a6abc0
+    &:after
+      background-color: #a6abc0

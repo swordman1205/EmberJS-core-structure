@@ -1,0 +1,63 @@
+.msg-small-preview-list
+  .msg-preview-item
+    .msg-preview-box
+      .msg-preview-select
+        float: left
+        margin: 0 5px 5px 0
+        width: 15px
+        height: 15px
+        border: 1px solid #e2e2ec
+        +border-radius(3px)
+
+      .msg-preview-lock
+        float: left
+        margin-right: 5px
+        display: inline-block
+        @extend .ico-msg-preview-lock
+
+      .msg-preview-author
+        float: left
+        width: 150px
+        position: relative
+        text-align: left
+        font-size: 16px
+        line-height: 19px
+        color: #676b76
+
+      .msg-preview-date
+        float: right
+        margin-bottom: 5px
+        color: #bfc0c9
+        font-size: 12px
+        text-align: right
+
+      .msg-preview-topic
+        float: left
+        width: 230px
+        position: relative
+        text-align: left
+        font-size: 16px
+        line-height: 19px
+        color: #676b76
+        +to
+
+      .msg-attachments-box
+        float: right
+
+      .msg-count
+        float: left
+        width: 17px
+        height: 17px
+        line-height: 18px
+        text-align: center
+        color: #858799
+        font-size: 12px
+        font-weight: 700
+        background-color: #d4d6e4
+        +border-radius(3px)
+
+      .msg-file-attached
+        float: left
+        margin-right: 3px
+        cursor: pointer
+        @extend .ico-file-attached

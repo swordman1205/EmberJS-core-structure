@@ -1,0 +1,48 @@
+.calendar-headline
+  .calendar-switch-menu
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    padding-top: 16px
+    width: 100%
+    height: 100%
+    text-align: center
+    +box-sizing(border-box)
+
+  .calendar-switch-box
+    display: inline-block
+    position: relative
+    padding: 0 45px
+
+  .switch-btn
+    position: absolute
+    cursor: pointer
+    top: 50%
+    margin-top: -12px
+    &.left
+      left: 0
+      @extend .ico-calendar-left
+      &:hover
+        @extend .ico-calendar-left_hov
+
+    &.right
+      right: 0
+      &:hover
+        @extend .ico-calendar-right_hov
+      @extend .ico-calendar-right
+
+  .switch-val
+    display: table
+    color: #858799
+    font-size: 20px
+    .switch-val-box
+      display: table-cell
+      height: 40px
+      vertical-align: middle
+      text-align: center
+    .period
+      display: block
+      margin-top: 5px
+      font-size: 12px
+      font-weight: 300

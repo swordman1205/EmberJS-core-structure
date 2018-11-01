@@ -1,0 +1,30 @@
+.contact-search
+  .contact-search-input-box
+    position: relative
+    display: block
+
+    .contact-search-input
+      width: 100%
+      padding: 8px 12px
+      border: 1px solid #ced0da
+      background-color: #fbfbff
+      color: #798da5
+      font-size: 15px
+      +border-radius(3px)
+      +box-sizing(border-box)
+      +placeholder(#878a9a,15px)
+      &:focus
+        border: 1px solid #62b8d1
+
+    .ico-search
+      &:after
+        position: absolute
+        content: ""
+        top: 12px
+        right: 10px
+        @extend .ico-search-empty
+
+    input:focus + .ico-search
+      &:after
+        @extend .ico-search_hov
+

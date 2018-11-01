@@ -1,0 +1,146 @@
+.msg-item
+  .msg-item-data
+    .msg-item-box
+      position: relative
+      padding-left: 55px
+      margin-bottom: 20px
+      min-height: 40px
+      +clear
+      &.link
+        cursor: pointer
+      .msg-item-img
+        position: absolute
+        top: 5px
+        left: 0
+        width: 40px
+        height: 40px
+        background-color: #d7d7df
+        +border-radius(50%)
+
+      .msg-item-author
+        float: left
+        padding-top: 2px
+
+      .author-name
+        color: $color-base
+        font-size: 14px
+        line-height: 24px
+        font-weight: 700
+
+      .recipient-list
+        float: left
+        width: 90%
+        color: #aeb1bd
+        font-size: 15px
+        line-height: 24px
+
+        span
+          float: left
+          margin-right: 5px
+
+        .recipient-name
+          float: left
+          margin-right: 10px
+          position: relative
+          font-size: 15px
+          color: #898b9f
+          &.done
+            color: #f3b199
+
+        .recipient-status
+          float: left
+          padding-left: 20px
+          margin-right: 10px
+          position: relative
+          font-size: 15px
+          color: #f3b199
+          &:after
+            position: absolute
+            content: " "
+            left: 0
+            bottom: 6px
+            @extend .ico-email_close
+
+          &.with-dd
+            .val
+              cursor: pointer
+              &:after
+                position: absolute
+                content: " "
+                right: -15px
+                top: 10px
+                @extend .ico-recipient-mail_tile
+
+          &.done
+            color: $color-gray
+            &:after
+              @extend .ico-email_opened
+
+          &.clicked
+            .recipient-status-dd
+              display: block
+              .val
+                display: block
+                position: relative
+                border-bottom: 1px solid #e3e3f0
+
+          .val
+            position: relative
+            display: block
+            z-index: 15
+
+        .recipient-status-dd
+          position: absolute
+          display: none
+          z-index: 14
+          min-width: 165px
+          top: -7px
+          left: -15px
+          padding-top: 40px
+          background-color: #fff
+          +box-shadow(0 1px 4px #c8cbdc)
+          &:after
+            position: absolute
+            content: " "
+            top: 11px
+            left: 15px
+            z-index: 90
+            @extend .ico-email_opened
+
+          .recipient-name-val
+            display: block
+            width: 100%
+            padding: 8px 15px 8px 30px
+            border-top: 1px solid #e3e3f0
+            +box-sizing(border-box)
+            &:after
+              top: 15px
+              left: 15px
+
+
+        a
+          float: left
+          margin-right: 5px
+          position: relative
+          font-size: 15px
+          color: #898b9f
+          padding: 0 15px
+          &:before
+            position: absolute
+            content: " "
+            right: 0
+            bottom: 9px
+            @extend .ico-recipient-mail_tile
+
+          &:after
+            position: absolute
+            content: " "
+            left: 0
+            bottom: 6px
+            @extend .ico-email_opened
+
+      .msg-item-time
+        float: right
+        color: $color-gray
+        font-size: 14px
+        line-height: 24px

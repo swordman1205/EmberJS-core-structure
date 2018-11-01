@@ -1,0 +1,204 @@
+.login-form
+  position: relative
+  margin: 100px auto 50px auto
+  padding: 65px
+  width: 500px
+  background-color: #f3f3f9
+  +border-radius(3px)
+  +box-sizing(border-box)
+  +box-shadow(0 1px 4px $color-gray)
+
+  .login-form-title
+    margin-bottom: 20px
+    color: $color-base
+    font-size: 34px
+    font-weight: 700
+    text-align: center
+    +text-shadow(0 1px 0 #cccdd2)
+    +roboto
+
+  .input-holder
+    float: none
+    display: block
+    position: relative
+    margin-bottom: 15px
+    &.error
+      .error-msg
+        display: block
+      .form-input
+        color: #f07a4f
+        border: 1px solid #f07a4f
+
+    label
+      position: absolute
+      content: ""
+      +ti
+
+  .input-error
+    color: #ff411f
+    font-size: 12px
+    padding: 8px 5px 0 0
+    text-align: left
+
+  .user-name
+    &.error
+      .form-input ~ label
+        @extend .ico-login-user_error
+    .form-input:focus ~ label
+      @extend .ico-login-user_act
+
+    label
+      top: 16px
+      left: 15px
+      @extend .ico-login-user
+
+  .user-password
+    &.error
+      .form-input ~ label
+        @extend .ico-login-password_error
+    .form-input:focus ~ label
+      @extend .ico-login-password_act
+
+    label
+      top: 16px
+      left: 15px
+      @extend .ico-login-password
+
+  .user-password-confirm
+    &.error
+      .form-input ~ label
+        @extend .ico-login-password-confirm_error
+    .form-input:focus ~ label
+      @extend .ico-login-password-confirm_act
+
+    label
+      top: 18px
+      left: 15px
+      @extend .ico-login-password-confirm
+
+  .login-administrator
+    &.error
+      .form-input ~ label
+        @extend .ico-login-administrator_error
+    .form-input:focus ~ label
+      @extend .ico-login-administrator_act
+
+    label
+      top: 20px
+      left: 17px
+      @extend .ico-login-administrator
+
+  .form-input
+    padding: 14px 15px 14px 35px
+    width: 100%
+    border: 1px solid $color-gray
+    color: $color-base
+    font-size: 15px
+    font-weight: normal
+    background-color: #fff
+    +box-sizing(border-box)
+    +border-radius(3px)
+    +placeholder(#c3c4c9,15px)
+    &:focus
+      border: 1px solid #62b8d1
+    &[disabled]
+      opacity: 0.5
+
+  .error-span
+    font-size: 12px
+    background-color: #ef794f
+    color: white
+
+  .error-msg
+    text-align: center
+    color: #fff
+    font-size: 12px
+    line-height: 21px
+    font-weight: 500
+    background-color: #ef794f
+    border-radius: 3px
+    width: 100%
+    margin-top: 10px
+    margin-bottom: 10px
+
+  .login-form-actions
+    padding-top: 5px
+    +clear
+
+    .login-form-btn
+      float: left
+      margin: 0
+      height: 36px
+      line-height: 38px
+
+    .login-form-sign
+      float: right
+      position: relative
+      &.clicked
+        .login-form-dropdown
+          display: block
+
+    .login-form-btn-sign
+      color: $color-base
+      font-size: 13px
+      line-height: 41px
+      cursor: pointer
+
+    .login-form-dropdown
+      display: none
+      position: absolute
+      top: 60px
+      right: 0
+      padding-top: 30px
+      width: 370px
+      background-color: #fff
+      +box-sizing(border-box)
+      +box-shadow(0 1px 4px #c8cbdc)
+      &:after
+        bottom: 100%
+        right: 20%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+        border-color: rgba(255, 255, 255, 0)
+        border-bottom-color: #fff
+        border-width: 6px
+        margin-left: -6px
+
+      .dropdown-title
+        margin-bottom: 10px
+        padding: 0 30px
+        color: $color-base
+        font-size: 18px
+        line-height: 20px
+        font-weight: 500
+
+      .dropdown-text
+        margin-bottom: 25px
+        padding: 0 30px
+        color: #797b87
+        font-size: 14px
+        line-height: 21px
+        font-weight: 300
+
+      .dropdown-close
+        display: block
+        height: 40px
+        line-height: 41px
+        color: #797b87
+        font-weight: 500
+        font-size: 15px
+        text-align: center
+        border-top: 1px solid #e5e7ef
+        background-color: #eaebf2
+        cursor: pointer
+
+.registered-success
+  background-color: seagreen
+  margin-bottom: 20px
+  font-size: medium
+  padding: 4px 8px
+  border-radius: 4px

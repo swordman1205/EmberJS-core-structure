@@ -1,0 +1,32 @@
+{{log model}}
+<div class="msg-list">
+  <div class="msg-item compose active">
+    <div class="msg-item-data">
+      <div class="modal-window-form">
+        <div class="modal-window-input-box">
+          <div class="modal-window-input-list">
+            <div class="input-holder">
+              <div class="msg-add-recipient">
+                <span class="add-recipient-btn {{if isCcEditing 'hide'}}" {{action "cc"}}>Add CC</span>
+                <span class="add-recipient-btn {{if isBccEditing 'hide'}}" {{action "bcc"}}>Add BCC</span>
+              </div>
+
+              {{partial "partials/compose-recipients"}}
+
+              {{#unless model.draftParent}}
+                {{input class="modal-window-input" placeholder="Subject" value=model.subject}}
+              {{/unless}}
+            </div>
+          </div>
+        </div>
+
+        <div class="input-holder">
+          {{dekko-editor autofocus=model.isNew replyId=model.id value=model.message}}
+        </div>
+      </div>
+
+      {{compose-attachments attachments=model.attachments documentPickerAction=documentPickerAction}}
+      {{partial "partials/compose-actions"}}
+      </div>
+  </div>
+</div>

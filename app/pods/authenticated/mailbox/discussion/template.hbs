@@ -1,0 +1,17 @@
+{{! Subject }}
+<div class="msg-data-headline">
+  <span class="text">{{model.subject}}</span>
+  <span class="status {{model.isComplete}}" {{action "toggleComplete"}}>
+    <i class="ico ico-msg-mark"></i>
+    <span>Done</span>
+  </span>
+</div>
+
+{{! Replies list }}
+{{replies-list model=model.replies}}
+
+{{! Incoming reply toast }}
+<div class="toast toast-incoming {{unless hasIncomingReply 'hide'}}">
+  <span>You have new incoming mail.</span>
+  <a href="javascript:void(0)" class="toast-link" {{action "reload"}}>View</a>
+</div>

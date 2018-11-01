@@ -1,0 +1,131 @@
+html
+  height: 100%
+
+body
+  height: 100%
+  min-height: 100%
+  background: #EEEFF1
+  font-size: 16px
+  // color: #E3E4E9
+  overflow: hidden
+  font-family: "Roboto", sans-serif
+  .tooltip
+    display: none !important
+a
+  text-decoration: none
+  outline: none
+  border-bottom: 1px solid transparent
+  +roboto
+  &:hover
+    border-bottom: 1px solid transparent
+  &:visited
+    text-decoration: none
+    outline: none
+    border-bottom: 1px solid transparent
+    +roboto
+
+input
+  margin: 0
+  padding: 0
+  outline: none
+  border: 0
+  +roboto
+
+textarea
+  width: 100px
+  height: 200px
+  outline: none
+  +roboto
+
+.with-scroll
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar-track
+    background-color: #e1e3ec
+
+  &::-webkit-scrollbar
+    width: 6px
+    background-color: #e1e3ec
+
+  &::-webkit-scrollbar-thumb
+    background-color: #bdc0cb
+    +border-radius(3px)
+
+.ember-scroll
+  height: 100%
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar-track
+    background-color: #e1e3ec
+
+  &::-webkit-scrollbar
+    width: 6px
+    background-color: #e1e3ec
+
+  &::-webkit-scrollbar-thumb
+    background-color: #bdc0cb
+    +border-radius(3px)
+
+.ember-view
+  &.main-container
+    height: 100%
+
+.wrapper
+  height: 100%
+  overflow-y: scroll
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+
+.hide
+  display: none !important
+
+.fix
+  position: relative
+  padding: 0 $spacing-base
+  min-width: 753px
+  max-width: 1800px
+  margin: 0 auto
+  +box-sizing(border-box)
+  +clear
+  +media-below(1235)
+    padding: 0 10px
+
+.clear
+  clear: both
+  float: none !important
+
+.ico
+  display: block
+  position: absolute
+
+.fll
+  float: left !important
+
+.flr
+  float: right !important
+
+#overlay
+  position: fixed
+  z-index: 998
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #313943
+  background-color: rgba(49, 57, 67, 0.8)
+
+.external-link-container
+  padding-top: 15px
+  text-align: center
+  margin-top: 40px
+  border-top: 1px solid #DFE0E8
+  margin-bottom: -10px
+
+.external-link
+  font-size: 14px
+  color: #4796de
+
+.external-link-wr
+  color: #434343
+  font-size: 13px
+  line-height: 41px

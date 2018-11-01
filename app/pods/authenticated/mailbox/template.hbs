@@ -1,0 +1,23 @@
+<div class="widget no-style">
+  {{discussion-menu application=application}}
+
+  <div class="msg">
+    {{discussion-summaries
+      firstOnPage=firstOnPage
+      lastOnPage=lastOnPage
+      total=total
+      isFirstPage=isFirstPage
+      isLastPage=isLastPage
+      prevPage="prevPage"
+      nextPage="nextPage"
+      filteredContent=filteredContent
+      hubType=hubType
+      ctrl=controller}}
+
+    <div class="msg-data">
+      <div class="msg-data-box">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>

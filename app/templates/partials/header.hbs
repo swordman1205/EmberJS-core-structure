@@ -1,0 +1,106 @@
+﻿<div class="header">
+  <div class="fix">
+    {{#link-to "authenticated.inbox" classNames="header-logo"}}DEKKO{{/link-to}}
+
+    <label class="input-holder">
+      {{input enter="search" value=keywords class="form-input" type="text" placeholder="Search" id="search"}}
+      <a href="javascript:void(0)" class="btn btn-default searchButton" {{action "search" keywords}}></a>
+    </label>
+
+    <ul class="header-menu">
+      <li class="header-menu-item first {{if controllers.widgets.isDiscussion 'current'}}">
+        {{#link-to 'authenticated.inbox' tagName="a" title="Mail"}}
+          <div class="header-menu-link mail-link {{if inbox 'with-count'}}">
+            <span class="link-text">Mail</span>
+
+            {{#if inbox}}
+              <span class="header-menu-count">{{inbox}}</span>
+            {{/if}}
+          </div>
+        {{/link-to}}
+      </li>
+
+      <li class="header-menu-item {{if controllers.widgets.isContacts 'current'}}">
+        {{#link-to "authenticated.contacts" class="header-menu-link contacts-link" title="Contacts"}}
+          <span class="link-text">Contacts</span>
+        {{/link-to}}
+      </li>
+
+      <li class="header-menu-item hide {{if controllers.widgets.isCalendar 'current'}}">
+        <a href="#" class="header-menu-link calendar-link">Calendar</a>
+      </li>
+
+      <li class="header-menu-item last {{if controllers.widgets.isCloud 'current'}}">
+        {{#link-to 'authenticated.cloud' class="header-menu-link cloud-link" title="Cloud"}}
+          <span class="link-text">Cloud</span>
+        {{/link-to}}
+      </li>
+    </ul>
+
+    <div>
+      {{dekko-select
+        class="header-user-menu"
+        classNameBindings="header-user-name"
+        value=selectedDefaultValue.id
+        model=contentResult
+        onSelect=(action 'changeDomain')
+        labelKey="domainName"
+        valueKey="id"
+        canSearch=false}}
+    </div>
+
+    <div class="header-user-menu">
+      <div class="header-user-img">
+        {{secure-image src=model.iconUrl security=model.iconSecurity class="header-icon"}}
+      </div>
+
+      <p class="header-user-name">{{model.nameAlias}}</p>
+
+      <ul class="dropdown-menu">
+        {{!-- <li class="dropdown-menu-item" {{action 'openSettingsModal'}}>Settings<i class="ico ico-dd-settings"></i></li> --}}
+        <li class="dropdown-menu-item">
+          {{#link-to (modal-params 'modals.settings' applicationId=model.id)}}Settings<i class="ico ico-dd-settings"></i>{{/link-to}}
+        </li>
+        {{!-- <li class="dropdown-menu-item" {{action 'openChangePasswordModal'}}>Change password<i class="ico ico-dd-settings"></i></li> --}}
+        <li class="dropdown-menu-item">
+          {{#link-to (modal-params 'modals.change-password')}}Change password<i class="ico ico-dd-settings"></i>{{/link-to}}
+        </li>
+        {{!-- <li class="dropdown-menu-item" {{action 'openAddAccountModal'}}>Add account<i class="ico ico-dd-settings"></i></li> --}}
+        <li class="dropdown-menu-item">
+          {{#link-to (modal-params 'modals.add-account')}}Add account<i class="ico ico-dd-settings"></i>{{/link-to}}
+        </li>
+
+        {{#if model.canSubscribe}}
+          <li class="dropdown-menu-item" {{action 'openSubscribeModal'}}>Subscribe<i class="ico ico-dd-settings"></i></li>
+        {{/if}}
+
+        {{#if model.canUnsubscribe}}
+          <li class="dropdown-menu-item" {{action 'openSubscribeModal'}}>Unsubscribe<i class="ico ico-dd-settings"></i></li>
+        {{/if}}
+
+        {{#if model.isAdmin}}
+          <li class="dropdown-menu-item"><i class="ico ico-dd-settings"></i>{{#link-to 'authenticated.approve'}}Domain approval{{/link-to}}</li>
+          <li class="dropdown-menu-item"><i class="ico ico-dd-settings"></i>{{#link-to 'authenticated.circle-master'}}Circle masters{{/link-to}}</li>
+          <li class="dropdown-menu-item" {{action 'openDigestModal'}}>Digest<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item" {{action 'openReleaseNotes'}}>Release notes<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item" {{action 'openDeleteHeader'}}>Delete header<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item" {{action 'getLogs'}}>Logs<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item" {{action 'getUsers'}}>Users<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item"><i class="ico ico-dd-settings"></i><a href="/elmah">Elmah</a></li>
+        {{/if}}
+
+        {{#if model.isDomainAdmin}}
+          <li class="dropdown-menu-item" {{action "openDomainSettingsModal"}}>Circle settings<i class="ico ico-dd-settings"></i></li>
+        {{/if}}
+
+        {{#if model.isCircleMaster}}
+          <li class="dropdown-menu-item" {{action 'circlesApproval'}}>Circles management<i class="ico ico-dd-settings"></i></li>
+          <li class="dropdown-menu-item" {{action 'pendingCirclesApproval'}}>Pending circles management<i class="ico ico-dd-settings"></i></li>
+        {{/if}}
+
+        <li class="dropdown-menu-item" {{action 'openInvitationsModal'}}>Outstanding invitations<i class="ico ico-dd-settings"></i></li>
+        <li class="dropdown-menu-item" {{action 'logout'}}>Log out<i class="ico ico-dd-logout"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>

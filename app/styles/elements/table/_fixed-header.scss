@@ -1,0 +1,9 @@
+@mixin fixed-header {
+  tbody, thead > tr {
+    display: block;
+  }
+
+  tbody {
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,53 @@
+.widget,
+.widget-preview
+  .widget-menu
+    .widget-menu-item
+      &.active
+        .widget-menu-link
+          color: #EF764C
+          background-color: #fff
+          &:before
+            position: absolute
+            left: 0
+            bottom: -1px
+            content: " "
+            width: 100%
+            height: 1px
+            background-color: #f07a4f
+          &:after
+            position: absolute
+            z-index: 10
+            top: 100%
+            left: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            pointer-events: none
+            border-color: rgba(240, 122, 79, 0)
+            border-top-color: #f07a4f
+            border-width: 4px
+            margin-left: -4px
+
+        .ico-widget-inbox
+          @extend .ico-widget-inbox_hov
+        .ico-widget-sent
+          @extend .ico-widget-sent_hov
+        .ico-widget-draft
+          @extend .ico-widget-draft_hov
+        .ico-widget-chat
+          @extend .ico-widget-chat_hov
+        .ico-agenda
+          @extend .ico-agenda_act
+        .ico-month
+          @extend .ico-month_act
+        .ico-week
+          @extend .ico-week_act
+
+        .widget-menu-count
+          color: #f3b69f
+          border: 1px solid #f3b69f
+          &:before
+            content: ""
+            color: #f3b69f
+            border-right-color: #f3b69f

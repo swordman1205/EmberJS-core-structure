@@ -1,0 +1,144 @@
+.chat-modal-msg
+  $vertical-space: $chat-header-height + $chat-textarea-height
+
+  padding: 15px 0 0 0
+  height: calc(100% - #{$vertical-space})
+  +box-sizing(border-box)
+
+  .user-msg
+    position: relative
+    margin-bottom: 15px
+    padding: 0 25px 0 70px
+    &.gray
+      padding: 0 15px 0 20px
+      +clear
+      .user-msg-box
+        float: right
+        background-color: #e7e9ef
+        &:after,
+        &:before
+          left: 100%
+          top: 20px
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+        &:after
+          border-color: rgba(231, 233, 239, 0)
+          border-left-color: #e7e9ef
+          border-width: 5px
+          margin-top: -5px
+        &:before
+          border-color: rgba(215, 217, 227, 0)
+          border-left-color: #d7d9e3
+          border-width: 6px
+          margin-top: -6px
+
+        .user-img
+          display: none
+
+  .user-img
+    position: absolute
+    top: 0
+    left: 20px
+    img
+      +border-radius(50%)
+
+  .user-msg-box
+    position: relative
+    display: inline-block
+    width: 100%
+    padding: 8px 8px 5px 8px
+    border: 1px solid #d7d9e3
+    background-color: #fff
+    word-break: break-word
+    +border-radius(3px)
+    +box-sizing(border-box)
+    &:after,
+    &:before
+      right: 100%
+      top: 20px
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+    &:after
+      border-color: rgba(255, 255, 255, 0)
+      border-right-color: #ffffff
+      border-width: 5px
+      margin-top: -5px
+    &:before
+      border-color: rgba(215, 217, 227, 0)
+      border-right-color: #d7d9e3
+      border-width: 6px
+      margin-top: -6px
+
+  .user-name
+    padding-right: 115px
+    color: $color-base
+    font-size: 12px
+    line-height: 15px
+    font-weight: 500
+
+  .user-msg-text
+    color: $color-base
+    font-size: 14px
+    line-height: 21px
+
+  .user-msg-date
+    position: absolute
+    top: 9px
+    right: 8px
+    min-width: 55px
+    max-width: 115px
+    text-align: right
+    color: $color-gray
+    font-size: 13px
+    font-weight: 300
+
+.chat-modal-msg-new
+  position: relative
+  margin-right: -2px
+  height: 70px
+  background-color: #fff
+  border-top: 1px solid #e4e3eb
+  +border-radius(0 0 3px 3px)
+
+  .chat-modal-textarea
+    display: block
+    border: 0
+    padding: 10px 50px 10px 10px
+    width: 100%
+    height: 100%
+    resize: none
+    color: #666b76
+    font-size: 14px
+    line-height: 21px
+    +box-sizing(border-box)
+    +border-radius(0 0 3px 3px)
+    &.no-actions
+      padding: 10px
+    &::-webkit-scrollbar-track
+      background-color: #e1e3ec
+
+    &::-webkit-scrollbar
+      width: 6px
+      background-color: #e1e3ec
+
+    &::-webkit-scrollbar-thumb
+      background-color: #bdc0cb
+      +border-radius(3px)
+
+  .ico-chat-smiles
+    top: 15px
+    right: 17px
+    cursor: pointer
+
+  .ico-chat-attached
+    top: 40px
+    right: 18px
+    cursor: pointer

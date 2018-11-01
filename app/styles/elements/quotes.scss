@@ -1,0 +1,12 @@
+blockquote {
+  $bg-color: #F3F3F9;
+  $spacing: 10px;
+
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  padding: .5em $spacing;
+  background: darken($bg-color, 3%);
+  border-left: $spacing solid darken($bg-color, 10%);
+
+  //@include border-radius(2px);
+  border-radius: 2px;
+}

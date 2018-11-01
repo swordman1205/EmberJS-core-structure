@@ -1,0 +1,62 @@
+/*=== Default ===*/
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+
+/*=== Includes ===*/
+@import "var/var";
+
+/*=== Libraries ===*/
+@import "lib/select2";
+@import "lib/fa";
+@import "lib/bootstrap-for-ace";
+@import "lib/ace";
+@import "lib/jscrollpane";
+
+/*==== Mixins ====*/
+@import "mixins/background";
+@import "mixins/breakpoints";
+@import "mixins/clear";
+@import "mixins/fonts";
+@import "mixins/placeholder";
+@import "mixins/sprite";
+@import "mixins/text-indent";
+@import "mixins/text-overflow";
+@import "mixins/user-select";
+@import "mixins/media";
+
+/*=== Main ===*/
+@import "base/import";
+
+/*=== Blocks ===*/
+@import "blocks/blocks";
+
+/*=== Elements ===*/
+@import "elements/import";
+
+/*=== Modules ===*/
+@import "modules/modules";
+
+@import "edit";
+
+h2 {
+  font-size: 22px;
+  color: $color-aux;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ember-scroll.h-a {
+  height: 100% !important;
+  overflow-y: scroll !important;
+}
+
+.file-info {
+  .ico-file-delete {
+    float: right;
+    position: relative;
+  }
+}

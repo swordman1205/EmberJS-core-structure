@@ -1,0 +1,18 @@
+.circles .circles-view {
+  .circles-view-summary {
+    width: 100%;
+
+    .summary-prop,
+    .summary-val {
+      color: $color-base;
+    }
+
+    .summary-prop {
+      text-align: right;
+    }
+
+    .summary-val {
+      font-weight: bold;
+    }
+  }
+}

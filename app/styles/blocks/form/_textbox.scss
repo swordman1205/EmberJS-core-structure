@@ -1,0 +1,11 @@
+.textbox {
+  padding: 10px 12px;
+  border: 1px solid #cdcfde;
+
+  @include box-sizing(border-box);
+  @include border-radius(3px);
+
+  &:focus {
+    border-color: #61b7d1;
+  }
+}

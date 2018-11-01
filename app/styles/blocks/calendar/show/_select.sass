@@ -1,0 +1,63 @@
+.calendar-data
+  position: relative
+  .popup-modal-wrap
+    position: absolute
+    overflow: auto
+    &.calendar-modal
+      padding: 10px
+      +box-sizing(border-box)
+      .popup-modal
+        padding-bottom: 0
+        width: auto
+        +clear
+
+    .select2-container
+      float: right
+      width: 400px
+      outline: none
+      //&.select2-container-active
+
+      .select2-choices
+        padding: 1px 0 1px 0
+        background-color: #fff
+        border: 1px solid #cdcfde
+        color: #b4b9c9
+        font-size: 14px
+        +border-radius(3px)
+        +box-shadow(none)
+        +background-image(none)
+        +box-sizing(border-box)
+
+      .select2-drop-active
+        margin-top: -2px
+        border: 0
+
+      .select2-search-choice
+        padding: 0 25px 0 10px
+        height: 26px
+        color: #7d7f8f
+        font-size: 14px
+        line-height: 26px
+        border: 1px solid #cdcfd9
+        background-color: #f0f1f7
+        +border-radius(3px)
+        +box-shadow(none)
+        +background-image(none)
+
+        a
+          top: 9px
+          left: auto
+          right: 9px
+          width: 8px
+          height: 8px
+          background: none
+          border-bottom: 0
+          text-decoration: none
+          &:hover
+            background: none
+          &:after
+            position: absolute
+            content: ""
+            top: 0
+            left: 0
+            @extend .ico-tag-close

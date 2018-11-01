@@ -1,0 +1,38 @@
+{{#link-to route model.id class="msg-link"}}
+  <div class="msg-preview-actions">
+    {{dekko-checkbox model=model classNames="msg-preview-select"}}
+    <i class={{if model.isSuccessfullyDecrypted 'msg-preview-lock' 'msg-preview-unlock-error'}}></i>
+  </div>
+  <div>
+    <div class="msg-preview-img">
+      {{secure-image src=finalSender.iconUrl security=finalSender.iconSecurity}}
+    </div>
+    <div class="msg-preview-data">
+      <div class="msg-preview-box">
+
+        {{! Sender }}
+        <p class="msg-preview-author">
+          <span class="{{unless model.isInbox 'hide'}}">To:</span>
+          {{memberList}}
+        </p>
+
+        {{! Subject }}
+        <p class="msg-preview-topic">
+          <span>{{model.subject}}</span>
+          <i class="msg-count {{unless hasReplies 'hide'}}">{{model.repliesNumber}}</i>
+        </p>
+      </div>
+    </div>
+    <div class="msg-preview-info">
+
+      {{! Date }}
+      <div class="msg-time">{{format-date model.date}}</div>
+      <div class="msg-attachments">
+        <div class="msg-attachments-box">
+          <i class="msg-file-attached {{unless model.hasAttachments.length 'hide'}}"></i>
+          <i class="msg-preview-flag {{if model.isComplete 'complete'}}" {{action "toggleComplete" bubbles=false}}></i>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/link-to}}

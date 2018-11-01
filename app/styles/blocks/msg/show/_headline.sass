@@ -1,0 +1,26 @@
+.msg-data-headline
+  padding: 15px 20px 25px 20px
+  color: $color-base
+  font-size: 26px
+  line-height: 31px
+
+  .text
+    margin-right: 10px
+
+  .status
+    display: inline-block
+    position: relative
+    padding-left: 15px
+    color: $color-gray
+    font-size: 14px
+    line-height: 14px
+    font-weight: 700
+    cursor: pointer
+    &.is-complete
+      color: #47c17d
+      .ico-msg-mark
+        @extend .ico-msg-mark_hov
+
+    .ico-msg-mark
+      left: 0
+      bottom: 2px

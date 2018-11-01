@@ -1,0 +1,61 @@
+.circles {
+  .circles-view {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    background: lighten(#ecebf0, 5%);
+    color: $color-base;
+    overflow: hidden;
+    @include box-sizing(border-box);
+
+    .circles-view-headline {
+      $headline-title-font-size: 24px;
+
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ecebf0;
+
+      .headline-title,
+      .circle-status {
+        font-size: $headline-title-font-size;
+      }
+
+      .headline-title {
+        display: inline;
+        font-weight: bold;
+      }
+
+      .circle-status {
+        color: lighten($color-base, 5%);
+      }
+
+      .headline-actions {
+        float: right;
+        line-height: $headline-title-font-size;
+
+        :not(:last-child) {
+          margin-right: 5px;
+        }
+
+        .btn-edit,
+        .btn-close {
+          color: $color-base;
+
+          &:before {
+            display: inline-block;
+            margin-right: 3px;
+            content: "";
+          }
+        }
+
+        .btn-edit:before {
+          @extend .ico-contact-edit;
+        }
+
+        .btn-close:before {
+          @extend .ico-contact-close;
+        }
+      }
+    }
+  }
+}

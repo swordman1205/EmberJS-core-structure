@@ -1,0 +1,35 @@
+.search-headline
+  +clear
+
+  .search-back-link
+    float: left
+    position: relative
+    padding: 20px 15px 17px 40px
+    color: $color-gray
+    font-size: 15px
+    line-height: 21px
+    font-weight: 500
+    &:after
+      position: absolute
+      content: ""
+      top: 50%
+      left: 20px
+      margin-top: -3px
+      @extend .ico-search-back
+
+  .search-title
+    float: left
+    border-left: 1px solid #eaecf2
+    max-width: 500px
+    padding: 19px
+    color: $color-base
+    font-size: 16px
+    line-height: 21px
+    font-weight: 500
+
+  .search-result-val
+    float: right
+    color: #7e8292
+    padding: 20px
+    font-size: 14px
+    line-height: 19px

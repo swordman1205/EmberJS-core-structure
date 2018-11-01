@@ -1,0 +1,130 @@
+.agenda-content
+  position: relative
+  width: 100%
+  height: 500px
+  .agenda-content
+    .calendar-headline
+      width: 100% !important
+      color: #858799
+      background-color: #fcfcff
+      .calendar-day
+        .val
+          color: #858799
+      .calendar-header-box
+        display: none
+
+  #agenda-content
+    overflow: auto
+    position: relative
+
+  .calendar-headline
+    position: relative
+    font-size: 26px
+    font-weight: 300
+    width: 98.5% !important
+    +box-sizing(border-box)
+    &:first-child
+      background-color: #fff
+      .calendar-day
+        .val
+          color: #61b7d1
+      .calendar-header-box
+        display: block
+
+  .agenda-item
+    position: relative
+    padding: 9px 20px
+    background-color: #fff
+    border-bottom: 1px solid #eaecf2
+    +clear
+    &:before
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 3px
+      height: 100%
+      background-color: #62b8d1
+
+    &.event
+      &:before
+        background-color: #62b8d1
+      .agenda-item-time
+        &:after
+          position: absolute
+          @extend .ico-event-time
+
+    &.task
+      &:before
+        background-color: #48c27e
+      .agenda-item-time
+        color: #48c27e
+        &:after
+          top: 4px
+          position: absolute
+          @extend .ico-task
+
+    &.reminder
+      &:before
+        background-color: #f07a4f
+      .agenda-item-time
+        padding-left: 0
+        color: #f07a4f
+        &:after
+          display: none
+
+    &.waiting-accepting
+      background-color: #f9f9f9
+      &:before
+        background-color: #96d9b4
+      .agenda-item-name
+        margin-right: 10px
+        width: 35%
+        color: #b1b3c4
+      .agenda-item-time
+        color: #96d9b4
+        &:after
+          top: 4px
+          position: absolute
+          @extend .ico-task
+          +opacity(0.6)
+
+    .agenda-item-time
+      float: left
+      position: relative
+      padding-left: 15px
+      width: 30%
+      color: #61b7d1
+      font-size: 14px
+      line-height: 21px
+      +box-sizing(border-box)
+      .period
+        margin-left: 4px
+        color: #c1c2ca
+        font-weight: 300
+      &:after
+        top: 5px
+        left: 0
+        content: ""
+        position: absolute
+        @extend .ico-event-time
+
+    .agenda-item-name
+      float: left
+      width: 70%
+      color: #868899
+      font-size: 16px
+      line-height: 21px
+
+    .agenda-msg
+      margin-right: 5px
+      color: #b7bbc7
+
+    .agenda-actions
+      float: left
+      margin: -3px 0
+    .agenda-btn
+      float: left
+      margin-left: 10px
+      height: 25px
+      line-height: 25px

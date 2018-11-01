@@ -1,0 +1,111 @@
+.msg-item
+  .msg-item-data
+    .msg-text
+      margin-bottom: 20px
+      color: $color-base
+      font-size: 14px
+      line-height: 25px
+      word-break: break-word
+
+      h1
+        font-size: 26px
+      h2
+        font-size: 24px
+      h3
+        font-size: 22px
+      h4
+        font-size: 20px
+      h5
+        font-size: 18px
+      h6
+        font-size: 16px
+
+      p
+        color: #50575f
+        font-size: 14px
+        line-height: 25px
+        word-break: break-word
+
+      ul
+        list-style: disc inside
+
+      ol
+        list-style: decimal inside
+
+      strong, b
+        font-weight: bold
+
+      i, cite, em, var, address, dfn
+        font-style: italic
+
+      small
+        font-size: smaller
+
+      mark
+        background-color: yellow
+
+      s, strike, del
+        text-decoration: line-through
+
+      u, ins
+        text-decoration: underline
+
+      sub
+        vertical-align: sub
+        font-size: smaller
+
+      sup
+        vertical-align: super
+        font-size: smaller
+
+      table
+        width: 100% !important
+
+      img
+        max-width: 100%
+
+    .modal-window-text
+      padding: 0
+
+    .modal-window-input-list
+      padding: 0
+
+    .modal-window-form
+      margin-top: 15px
+      border: 1px solid #d7d9e3
+      +border-radius(3px 3px 0 0)
+      .select2-container
+        &.modal-window-input
+          padding: 4px 140px 4px 12px
+      .modal-window-input
+        padding: 10px 12px
+      .msg-add-recipient
+        top: 3px
+        right: 10px
+
+    .modal-window-actions
+      margin-bottom: 10px
+      padding: 15px 20px 0 20px
+      border: 1px solid #d7d9e3
+      border-top: 0
+      background-color: #fcfcff
+      +border-radius(0 0 3px 3px)
+      +clear
+      +media-below(900)
+        padding: 15px 15px 0 15px
+      button
+        float: left
+        margin-right: 10px
+      .msg-btn
+        float: left
+        margin-bottom: 15px
+        +media-above(900)
+          padding: 0 10px
+
+        &.flr
+          margin-right: 0
+
+    .modal-window-list
+      border: 1px solid #dfe1e9
+      border-top: 0
+      background-color: #fcfcff

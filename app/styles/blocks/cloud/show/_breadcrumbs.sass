@@ -1,0 +1,52 @@
+.widget-breadcrumbs
+  float: left
+
+  .folder-name
+    float: left
+    position: relative
+    padding: 21px 0 16px 20px
+    color: #62b8d1
+    font-size: 14px
+    line-height: 20px
+    cursor: pointer
+    &:after
+      position: absolute
+      content: ""
+      top: 25px
+      left: 6px
+      @extend .ico-widget-breadcrumbs-sep
+    &.current
+      color: #797b87
+      &:after
+        @extend .ico-widget-breadcrumbs-sep_black
+    &:hover
+      .folder-name-dd
+        display: block
+
+    .folder-name-dd
+      display: none
+      position: absolute
+      padding: 0 7px
+      top: -12px
+      left: -17px
+      height: 26px
+      line-height: 26px
+      color: #61b7d1
+      background-color: #fff
+      font-size: 14px
+      z-index: 99
+      +border-radius(3px)
+      +box-shadow(0 1px 4px #c8cbdc)
+      &:after
+        top: 100%
+        left: 43px
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+        border-color: rgba(255, 255, 255, 0)
+        border-top-color: #fff
+        border-width: 8px
+        margin-left: -8px

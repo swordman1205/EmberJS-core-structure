@@ -1,0 +1,10 @@
+<i class="ico ico-msg-show {{unless hasMultipleReplies 'hide'}}" {{action "toggleExpandAll"}}></i>
+<div class="ember-scroll">
+  <ul>
+    {{#each model as |reply|}}
+      {{reply-item
+        model=reply
+        lastObject=lastObject}}
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,82 @@
+.cloud-explorer
+  width: 100%
+  margin-bottom: 15px
+  padding: 6px 5px 25px 15px
+  height: 270px
+  border: 1px solid #e3e3eb
+  background-color: #fff
+  +border-radius(3px)
+  +box-sizing(border-box)
+
+  .cloud-explorer-title
+    display: block
+    position: relative
+    margin: 0 0 0 -10px
+    padding: 8px 35px
+    color: #797b87
+    font-size: 14px
+    line-height: 21px
+    background-color: #e6f3f7
+    cursor: default
+    &:after
+      position: absolute
+      content: ""
+      top: 13px
+      left: 9px
+      @extend .ico-cloud-save_explorer
+
+  .cloud-explorer-box,
+  .cloud-explorer-file
+    position: relative
+    padding-left: 15px
+    cursor: default
+    &.with-dropdown
+      &:after
+        position: absolute
+        content: ""
+        top: 13px
+        left: 0px
+        @extend .ico-explorer-plus
+    &.clicked
+      &.with-dropdown
+        &:after
+          @extend .ico-explorer-minus
+
+      .cloud-explorer-child
+        display: block
+
+    .cloud-explorer-child
+      display: none
+      padding-left: 10px
+
+  .cloud-explorer-item
+    position: relative
+    padding: 5px 8px 5px 33px
+    color: #797b87
+    font-size: 14px
+    line-height: 21px
+
+    &:after
+      position: absolute
+      top: 8px
+      left: 8px
+      content: ""
+      @extend .ico-cloud-folder
+
+  .cloud-explorer-file
+    .cloud-explorer-item
+      &:after
+
+        @extend .ico-cloud-file
+
+
+
+.file-status
+  position: absolute
+  top: 10px
+  left: 0
+  @extend .ico-file-chosen-epmty
+  &.chosen-file
+    @extend .ico-file-chosen-file
+  &.chosen
+    @extend .ico-chosen

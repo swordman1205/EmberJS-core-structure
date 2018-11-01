@@ -1,0 +1,94 @@
+.chat-modal
+  position: fixed
+  z-index: 990
+  right: 30px
+  bottom: 0
+  width: 400px
+  height: 350px
+  &.whithout-nav
+    .chat-modal-dd
+      right: 0
+
+  .chat-modal-nav
+    position: absolute
+    right: 0
+    bottom: 0
+    padding: 10px
+    background-color: #fbfbff
+    +border-radius(30px 30px 0 0)
+    +box-sizing(border-box)
+    +box-shadow(0 1px 4px #c8cbdc)
+
+    .chat-user-list
+      .user-preview
+        position: relative
+        margin-bottom: 10px
+        width: 40px
+        height: 40px
+        cursor: pointer
+
+        &:not(.is-active)
+          opacity: .5
+
+        &:hover
+          .ico-chat-close
+            display: block
+        &.clicked
+          &:before
+            content: " "
+        &:before
+          right: 43px
+          bottom: 10px
+          z-index: 1
+          border: solid transparent
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+          border-color: rgba(243, 244, 249, 0)
+          border-left-color: #f3f4f9
+          border-width: 8px
+          margin-top: -8px
+        &:after
+          position: absolute
+          content: ""
+          right: 0
+          bottom: 0
+          @extend .ico-user-chat-status_offline
+        &.online
+          &:after
+            @extend .ico-user-chat-status
+        &.away
+          &:after
+            @extend .ico-away
+        &.no-disturb
+          &:after
+            @extend .ico-no-disturb
+        &.ico-invisible
+          &:after
+            @extend .ico-invisible
+        img
+          +border-radius(50%)
+
+        .ico-chat-close
+          display: none
+          top: 0
+          right: 0
+          cursor: pointer
+
+      .group-preview
+        position: relative
+        cursor: pointer
+        @extend .ico-group-preview
+        &:hover
+          .ico-chat-close
+            display: block
+
+        .ico-chat-close
+          display: none
+          top: 0
+          right: 0
+          cursor: pointer
+
+  .chat-modal-box
+    position: relative

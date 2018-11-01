@@ -1,0 +1,33 @@
+.hint {
+  display: inline-block;
+  position: relative;
+
+  .hint-explained {
+    position: absolute;
+    width: 300px;
+    margin-top: 10px;
+    padding: $spacing-base;
+    color: $color-base;
+    z-index: 999;
+
+    @include box-shadow(#e3e3eb 0 0 10px);
+
+    &, &:before {
+      background: white;
+      border: 1px solid #e3e3eb;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: -6px;
+      width: 10px;
+      height: 10px;
+      border-right: 0;
+      border-bottom: 0;
+      content: "";
+
+      @include rotate(45deg)
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.msg-list
+  position: relative
+  padding: 0 25px
+  background-color: #fcfcff
+  +clear
+  &.one-msg
+    margin-top: 0
+
+  .ico-msg-show
+    right: 20px
+    top: -20px
+    cursor: pointer
+
+  .ember-scroll
+    overflow: hidden
+
+  &.expanded
+    .ember-scroll
+      height: calc(100vh - 210px)
+      overflow-y: scroll
+
+.msg-item
+  margin-bottom: -1px
+  +clear
+
+.msg-item-data
+  display: none
+  margin: 0 -25px 0
+  padding: 20px 25px
+  background-color: #fff
+  border-top: 1px solid #eeeff4
+  +clear

@@ -1,0 +1,41 @@
+.search-content
+  .search-menu
+    float: left
+    width: 230px
+    border-right: 1px solid #dfe1e8
+    +box-sizing(border-box)
+
+    .search-menu-link
+      display: block
+      position: relative
+      padding: 10px 15px 10px 35px
+      border-bottom: 1px solid #dfe1e8
+      color: $color-base
+      font-size: 16px
+      line-height: 21px
+      text-transform: uppercase
+      font-weight: 500
+      +clear
+      &:hover
+        background-color: #fff
+      &.current
+        background-color: #fff
+        color: #529de1
+        &:before
+          position: absolute
+          content: ""
+          top: 0
+          left: 0
+          width: 5px
+          height: 100%
+          background-color: #868899
+          .val
+            color: #529de1
+      .text
+        float: left
+        margin-right: 5px
+
+      .val
+        float: left
+        color: $color-gray
+        font-weight: 300

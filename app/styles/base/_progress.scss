@@ -1,0 +1,35 @@
+progress {
+  position: relative;
+  height: 1.5em;
+  line-height: 1.5em;
+  background-color: #fbfbff;
+  border: 1px solid #ced0da;
+
+  @include box-sizing(border-box);
+  @include border-radius(3px);
+  @include appearance(none);
+
+  &::-webkit-progress-bar {
+    background-color: #fbfbff;
+  }
+
+  &[value]::-webkit-progress-value {
+    background-color: darken(#ced0da, 10%);
+    @include border-left-radius(3px);
+  }
+
+  &::-moz-progress-bar {
+    background-color: darken(#ced0da, 10%);
+    @include border-left-radius(3px);
+  }
+
+  &::-ms-fill {
+    background-color: darken(#ced0da, 10%);
+    border: none;
+  }
+
+  & + output {
+    display: inline-block;
+    margin-top: $spacing-small;
+  }
+}

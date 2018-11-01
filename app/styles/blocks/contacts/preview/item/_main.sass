@@ -1,0 +1,48 @@
+.contact-preview
+  position: relative
+  padding: 13px 20px 12px 20px
+  border-bottom: 1px solid #ecebf0
+  +clear
+  &.last
+    border-bottom: 0
+  &.favorite
+    .ico-contact-favorite
+      display: block
+
+  &.confirmed
+    .ico-contact-confirmed
+      display: block
+
+  &.online
+    .contact-status
+      color: #48c27e
+      font-weight: bold
+      &:after
+        background-color: #48c27e
+  &.away
+    .contact-status
+      color: #c8a302
+      &:after
+        background-color: #c8a302
+  &.no-disturb
+    .contact-status
+      color: #ef3631
+      &:after
+        background-color: #ef3631
+  &.invisible
+    .contact-status
+      color: #a6abc0
+      &:after
+        background-color: #a6abc0
+
+  .ico-contact-favorite
+    display: none
+    position: absolute
+    bottom: -5px
+    right: 2px
+
+  .ico-contact-confirmed
+    display: none
+    position: absolute
+    bottom: -6px
+    left: -2px

@@ -1,0 +1,17 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  opacity: .75;
+  z-index: 999;
+  @include border-radius(3px);
+
+  &.toast-incoming {
+    background: forestgreen;
+
+    .toast-link {
+      color: yellow;
+    }
+  }
+}

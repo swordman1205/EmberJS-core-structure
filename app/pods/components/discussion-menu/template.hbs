@@ -1,0 +1,45 @@
+<div class="widget-box">
+  <ul class="widget-menu">
+
+    {{#link-to "authenticated.inbox" tagName="li" class="widget-menu-item" href=false}}
+      {{#link-to "authenticated.inbox" class="widget-menu-link" bubbles=false}}
+        <i class="ico ico-widget-inbox"></i>
+        <span>Inbox</span>
+        {{#if application.inbox}}
+          <span class="widget-menu-count">{{application.inbox}}</span>
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+
+    {{#link-to "authenticated.outbox" tagName="li" class="widget-menu-item" href=false}}
+      {{#link-to "authenticated.outbox" class="widget-menu-link" bubbles=false}}
+        <i class="ico ico-widget-sent"></i>
+        <span>Sent</span>
+        {{#if application.outbox}}
+          <span class="widget-menu-count">{{application.outbox}}</span>
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+
+    {{#link-to "authenticated.draft" tagName="li" class="widget-menu-item" href=false}}
+      {{#link-to "authenticated.draft" class="widget-menu-link" bubbles=false}}
+        <i class="ico ico-widget-draft"></i>
+        <span>Drafts</span>
+        {{#if application.draft}}
+          <span class="widget-menu-count">{{application.draft}}</span>
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+
+    {{#link-to "authenticated.chats" tagName="li" class="widget-menu-item" href=false}}
+      {{#link-to "authenticated.chats" class="widget-menu-link" bubbles=false}}
+        <i class="ico ico-widget-chat"></i>
+        <span>Chat</span>
+        {{#if application.chat}}
+          <span class="widget-menu-count">{{application.chat}}</span>
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+
+  </ul>
+</div>

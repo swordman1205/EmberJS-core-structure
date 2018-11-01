@@ -1,0 +1,196 @@
+button
+  display: block
+  outline: none
+  border: 1px solid transparent
+  margin: 0
+  padding: 0
+  +roboto
+  +transition(background-color 0.15s ease-in, border 0.15s ease-in, box-shadow 0.15s ease-in, color 0.15s ease-in, text-shadow 0.15s ease-in)
+  &::-moz-focus-inner
+    border: 1px solid transparent
+    padding: 0
+    margin: 0
+
+.gray-btn
+  display: inline-block
+  position: relative
+  margin-bottom: 20px
+  padding: 0 15px
+  height: 29px
+  line-height: 30px
+  border: 1px solid gray
+  background-color: #f3f4f9
+  cursor: pointer
+  color: #5b5b5b
+  font-size: 16px
+  font-weight: 500
+  +text-shadow(0 1px 0 #fff)
+  +border-radius(3px)
+  +box-sizing(content-box)
+  &:visited,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    color: #7d8192
+  &:hover
+    color: #fff
+    background-color: #ef794f
+    border: 1px solid #ef794f
+    +text-shadow(none)
+    +box-shadow(0 1px 0 #c35f3b)
+
+  &.current
+    color: #fff
+    background-color: #ef794f
+    border: 1px solid #ef794f
+    +text-shadow(none)
+    &:hover
+      +box-shadow(none)
+    &:after
+      top: 100%
+      left: 50%
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(240, 122, 79, 0)
+      border-top-color: #f07a4f
+      border-width: 5px
+      margin-left: -5px
+
+.white-btn
+  display: inline-block
+  margin-bottom: 20px
+  padding: 0 15px
+  height: 29px
+  line-height: 26px
+  border: 1px solid #afb1c0
+  cursor: pointer
+  color: #7d8192
+  font-size: 16px
+  font-weight: 500
+  background: none
+  +border-radius(3px)
+  +box-sizing(content-box)
+  &:visited,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    color: #7d8192
+  &:hover
+    color: #ef794f
+    border: 1px solid #ef794f
+    +text-shadow(none)
+
+.orange-btn
+  display: inline-block
+  position: relative
+  padding: 0 20px
+  height: 29px
+  line-height: 30px
+  font-size: 16px
+  font-weight: 500
+  color: #fbfbff
+  background-color: #ef794f
+  cursor: pointer
+  border: 1px solid #ef794f
+  +box-shadow(0 1px 0 #c35f3b)
+  +text-shadow(0 1px 0 #c35f3b)
+  +border-radius(3px)
+  +box-sizing(content-box)
+  &:visited,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    color: #fbfbff
+  &:hover
+    color: #fbfbff
+    background-color: #f38d68
+    border: 1px solid #f38d68
+    +box-shadow(0 1px 0 #c35f3b)
+    +text-shadow(none)
+  &[disabled]
+    background-color: #efa78c
+    +box-shadow(0 1px 0 #edbdac)
+    border: 1px solid #f5b097
+
+.blue-btn
+  display: inline-block
+  position: relative
+  padding: 0 20px
+  height: 29px
+  line-height: 29px
+  background-color: #61b7d1
+  color: #fff
+  font-size: 15px
+  font-weight: 500
+  border: 1px solid #61b7d1
+  cursor: pointer
+  +border-radius(3px)
+  //+box-shadow(0 1px 0 #57aac3)
+  +box-sizing(content-box)
+  &:visited,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    color: #fff
+  &:hover
+    color: #61b7d1
+    background-color: #fcfcff
+    border: 1px solid #61b7d1
+    +box-shadow(none)
+    +text-shadow(none)
+
+.s-blue-btn
+  display: inline-block
+  padding: 0 20px
+  height: 29px
+  line-height: 29px
+  color: #61b7d1
+  font-size: 15px
+  font-weight: 500
+  border: 1px solid #b3dbe5
+  background-color: #fbfbff
+  cursor: pointer
+  +box-sizing(content-box)
+  +border-radius(3px)
+
+  &:visited,
+  &:hover,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    border-color: #b3dbe5
+    color: #61b7d1
+
+.beige-btn
+  display: inline-block
+  position: relative
+  padding: 0 13px
+  height: 30px
+  line-height: 30px
+  background-color: #fff7e3
+  color: #868899
+  font-size: 14px
+  border: 1px solid #d7d9e3
+  cursor: pointer
+  +border-radius(3px)
+  +box-sizing(content-box)
+  &:visited,
+  &:link,
+  &.MsoHyperlink,
+  &.MsoHyperlinkFollowed
+    color: #868899
+  &:hover
+    background-color: #FFF1D7
+  &.with-ico
+    padding-left: 35px
+  &.checked-delete-btn
+    &:before
+      content: ""
+      position: absolute
+      top: 8px
+      left: 13px
+      @extend .ico-checked-delete

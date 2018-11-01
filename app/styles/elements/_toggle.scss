@@ -1,0 +1,62 @@
+.toggle {
+  $width            : 2.5em;
+  $height           : 1em;
+  $border-radius    : 3px;
+
+  @mixin toggle-handle {
+    $handle-width: $width / 2;
+
+    display: block;
+    position: relative;
+    width: $handle-width;
+    height: 100%;
+    background-color: #fff;
+
+    @include background-image(linear-gradient(white, rgba($color-base, .1)));
+    @include border-radius($border-radius);
+  }
+
+  .toggle-switch {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-color: rgba($color-base, .2);
+    border: 1px solid $color-aux;
+
+    @include border-radius($border-radius);
+
+    &:after {
+      content: "";
+      @include toggle-handle;
+    }
+  }
+
+  .toggle-input {
+    display: none;
+
+    &:checked + .toggle-switch {
+      background-color: $color-success;
+      border-color: $color-success;
+
+      &:after {
+        left: $width / 2;
+      }
+    }
+  }
+
+  &.toggle-negative {
+
+    .toggle-switch:after {
+      left: $width / 2;
+    }
+
+    .toggle-input:checked + .toggle-switch {
+      background-color: $color-failure;
+      border-color: $color-failure;
+
+      &:after {
+        left: 0;
+      }
+    }
+  }
+}

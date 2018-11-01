@@ -1,0 +1,35 @@
+.circles {
+  .circles-list {
+    float: left;
+    width: 50%;
+    background-color: white;
+
+    .circles-item {
+      $item-color: $color-base;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #ecebf0;
+      }
+
+      &.is-disabled {
+        $disabled-item-color: lighten($item-color, 25%);
+
+        .circles-item-link,
+        .circle-status {
+          color: $disabled-item-color;
+        }
+      }
+
+      .circles-item-link {
+        display: block;
+        padding: 15px;
+        color: $item-color;
+      }
+
+      .circle-status {
+        color: lighten($item-color, 5%);
+      }
+    }
+  }
+
+}

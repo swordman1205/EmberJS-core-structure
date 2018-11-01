@@ -1,0 +1,100 @@
+.cloud-content
+  position: relative
+
+.cloud-modal-wrap
+  position: absolute
+  z-index: 99
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #101b53
+  background-color: rgba(16,27,83,0.10)
+
+  .cloud-modal
+    position: relative
+    margin: 50px auto
+    padding-bottom: 15px
+    width: 400px
+    background-color: #f3f3f9
+    +border-radius(3px)
+    +box-shadow(0 1px 4px #c8cbdc)
+    &.medium
+      width: 525px
+    &.with-preview
+      width: 525px
+      .cloud-explorer
+        padding: 0
+        height: auto
+        +clear
+      .cloud-explorer-holder
+        float: left
+        height: auto
+        max-height: 290px
+        width: 58%
+        padding: 6px 5px 15px 6px
+        +box-sizing(border-box)
+
+        .cloud-explorer-file
+          padding-left: 15px
+        .cloud-explorer-box
+          padding-left: 35px
+          &.with-dropdown
+            &:after
+              left: 25px
+
+  .cloud-modal-title
+    padding: 20px 40px 20px 20px
+    color: #61b7d1
+    font-size: 17px
+    font-weight: 700
+    text-transform: uppercase
+    background-color: #fff
+    border-bottom: 1px solid #d7d9e3
+    +border-radius(3px 3px 0 0)
+
+  .cloud-modal-text
+    margin-bottom: 15px
+    color: $color-base
+    font-size: 14px
+    line-height: 20px
+    font-weight: 500
+
+  .cloud-modal-data
+    padding: 15px 20px
+    +clear
+
+  .cloud-modal-actions
+    +clear
+    &.flr
+      .cloud-btn
+        float: left
+        margin-left: 15px
+
+  .cloud-modal-list
+    margin-bottom: 20px
+    +clear
+
+    .delete-file
+      float: left
+      position: relative
+      padding: 0 22px 0 7px
+      margin: 0 7px 7px 0
+      height: 24px
+      line-height: 24px
+      color: #797b87
+      font-size: 13px
+      border: 1px solid #ceced2
+      background-color: #f3f3f9
+      +border-radius(3px)
+
+      .ico-s-delete-file
+        top: 8px
+        right: 7px
+        cursor: pointer
+
+  .ico-cloud-close
+    position: absolute
+    top: 23px
+    right: 20px
+    cursor: pointer

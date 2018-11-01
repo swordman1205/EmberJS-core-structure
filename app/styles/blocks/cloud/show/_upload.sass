@@ -1,0 +1,46 @@
+.cloud-list
+  .cloud-item
+    .upload-file-status
+      position: absolute
+      z-index: 12
+      top: 0
+      left: 0
+      padding: 20px 15px 0 20px
+      width: 100%
+      height: 100%
+      background-color: #e6fbef
+      +box-sizing(border-box)
+      +clear
+      &.done
+        .ico-upload-status
+          @extend .ico-upload-done
+
+    .ico-upload-status,
+    .ico-upload-done
+      float: left
+      margin-right: 15px
+
+    .text
+      float: left
+      margin-right: 12px
+      color: #858799
+      font-size: 13px
+      line-height: 15px
+
+    .link
+      float: left
+      color: #4cacc7
+      font-size: 13px
+      line-height: 15px
+      cursor: pointer
+
+    .file-upload-bar
+      position: absolute
+      left: 0
+      bottom: 0
+      background-color: #48c27e
+      height: 3px
+
+    .ico-upload-close
+      float: right
+      cursor: pointer

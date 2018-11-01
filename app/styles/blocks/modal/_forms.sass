@@ -1,0 +1,95 @@
+.modal-window-input
+  .modal-window-text
+    background-color: #fff
+
+  .modal-window-form
+    .select2-container-multi
+      .select2-choices
+        .select2-search-field
+          input
+            padding-left: 0
+
+.modal-window-input-list
+  padding: 0 20px
+  background-color: #fcfcff
+
+  .select2-container
+    border-bottom: 1px solid #d7d9e3
+    &.modal-window-input
+      padding: 4px 140px 4px 0
+
+  .select2-container-active
+    .select2-choices
+      padding: 0
+      border: 0
+      background: none
+      +background-image(none)
+      +box-shadow(none)
+
+  .select2-choices
+    padding: 0
+    border: 0
+    background: none
+    +background-image(none)
+    +box-shadow(none)
+
+    .select2-search-choice
+      margin: 6px 0 0 0
+      padding: 0 16px 0 0
+      border: 0
+      color: #898c9f
+      font-size: 16px
+      line-height: 20px
+      background: none
+      +background-image(none)
+      +box-shadow(none)
+      +placeholder(#bdc0cc,16px)
+      &:hover
+        a
+          display: block
+      div
+        float: left
+      a
+        display: none
+        top: 5px
+        left: auto
+        right: 3px
+        border-bottom: 0
+
+.input-holder
+  float: none
+  width: 100%
+  position: relative
+
+  .modal-window-input
+    width: 100%
+    position: relative
+    z-index: 50
+    padding: 10px 20px 10px 0
+    color: #898c9f
+    font-size: 16px
+    background-color: #fcfcff
+    +box-sizing(border-box)
+    +placeholder(#bdc0cc,16px)
+    &.recipient
+      padding-right: 140px
+
+  .msg-add-recipient
+    position: absolute
+    top: 13px
+    right: 0
+    z-index: 99
+
+    .add-recipient-btn
+      float: left
+      margin-left: 15px
+      color: #bdc0cc
+      font-size: 14px
+      cursor: pointer
+
+.modal-window-text
+  background-color: #fff
+
+  .text-editor
+    iframe
+      padding: 12px 0 !important

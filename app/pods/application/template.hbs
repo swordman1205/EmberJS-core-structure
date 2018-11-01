@@ -1,0 +1,21 @@
+{{notification-container position="top"}}
+
+<div id="wrapper" class="wrapper">
+  {{#if isLoggedIn}}
+   {{ partial "partials/header" }}
+  {{/if}}
+
+  <div class="content">
+    {{outlet}}
+
+    <div class="text-center">
+      <footer id="footer">
+        Copyright 2017 Securest;
+        <a href="/release-notes">Release notes (v{{about.version}})</a>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="modal-layer">
+  {{outlet "modal"}}
+</div>

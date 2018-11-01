@@ -1,0 +1,17 @@
+<div class="input-holder {{additionalClass}} {{if (and (or didValidate (v-get model valuePath 'isDirty')) (v-get model valuePath 'isInvalid')) "error"}}">
+  {{input
+    id          = valuePath
+    class       = "form-input"
+    value       = value
+    placeholder = placeholder
+    type        = type
+    disabled    = disabled
+  }}
+  <label for={{valuePath}}>{{label}}</label>
+
+  {{#if (and (or didValidate (v-get model valuePath 'isDirty')) (v-get model valuePath 'isInvalid'))}}
+    <div class="input-error">
+      {{v-get model valuePath 'message'}}
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,62 @@
+.data-row {
+  $label-padding-x: 10px;
+
+  line-height: 36px;
+  @include clear;
+
+  & + .data-row {
+    margin-top: 10px;
+  }
+
+  .data-label,
+  .switch-label,
+  .data-input {
+    float: left;
+    @include box-sizing(border-box);
+  }
+
+  .data-label {
+    width: 40%;
+    padding-right: $label-padding-x;
+    text-align: right;
+
+    & + .data-input {
+      width: 60%;
+    }
+  }
+
+  //
+  // Switch row
+
+  .switch-label {
+    $label-width: 40%;
+
+    width: $label-width;
+
+    // Left label
+    &:first-child {
+      padding-right: $label-padding-x;
+      text-align: right;
+    }
+
+    // Switch input
+    & + .data-input {
+      width: 100% - $label-width * 2;
+      text-align: center;
+    }
+
+    // Right label
+    &:last-child {
+      padding-left: $label-padding-x;
+    }
+  }
+
+  .data-actions {
+    float: right;
+    width: 60%;
+
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

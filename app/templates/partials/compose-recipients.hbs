@@ -1,0 +1,9 @@
+{{recipients-search models=model.publicRecipients present=model.publicRecipients class="modal-window-input" placeholder="To" tabindex="1"}}
+
+{{#if isCcEditing}}
+  {{recipients-search models=cc present=cc class="modal-window-input" placeholder="cc" tabindex="2"}}
+{{/if}}
+
+{{#if isBccEditing}}
+  {{recipients-search models=bcc present=bcc class="modal-window-input" placeholder="bcc" tabindex="3"}}
+{{/if}}

@@ -1,0 +1,7 @@
+@import "fixed-header";
+
+table {
+  &.table-fixed-header {
+    @include fixed-header;
+  }
+}

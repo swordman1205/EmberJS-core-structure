@@ -1,0 +1,9 @@
+table {
+  td, th {
+    padding: $spacing-small $spacing-base;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}

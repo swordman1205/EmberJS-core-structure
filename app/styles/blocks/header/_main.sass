@@ -1,0 +1,271 @@
+.header
+  padding: $header-padding-top 0 $header-padding-bottom 0
+  +clear
+
+  .header-logo
+    float: left
+    margin-right: 25px
+    color: $color-gray
+    font-size: 34px
+    font-weight: 700
+
+  .input-holder
+    float: left
+    margin-right: 25px
+    width: 300px
+    position: relative
+    +media-below(1235)
+      width: 155px
+    +media-below(780)
+      margin-right: 8px
+    &:after
+      position: absolute
+      content: ""
+      top: 10px
+      right: 10px
+      @extend .ico-header-find
+
+    .searchButton
+      position: absolute
+      z-index: 2
+      height: 31px
+      width: 30px
+      top: 0
+      right: 0
+      +ti
+
+  .form-input
+    padding: 7px 35px 7px 10px
+    border: 1px solid $color-border
+    background: none
+    +border-radius(3px)
+    +placeholder(#8c8f9b,14px)
+
+  .header-user-menu
+    position: relative
+    float: right
+    margin-top: -2px
+    width: 200px
+    padding: 5px 30px 5px 0
+    height: $header-content-height
+    line-height: 27px
+    cursor: pointer
+    border: 1px solid $color-border
+    +border-radius(3px)
+    +box-sizing(border-box)
+    &.ember-select
+      padding: 0
+      border: 0 none
+
+      .es-control
+        border: 1px solid #a6a6a6
+        background: transparent
+        padding: 5px 30px 5px 5px
+        height: 40px
+        input
+          background: transparent
+      .es-arrow-zone
+        display: none
+    &:after
+      position: absolute
+      content: " "
+      top: 50%
+      right: 13px
+      margin-top: -2px
+      @extend .ico-header-tile
+    &:hover
+      background: #fcfcff
+      +border-radius(3px 3px 0 0)
+      .dropdown-menu
+        display: block
+
+    .header-user-img
+      float: left
+      margin-left: 7px
+      margin-right: 10px
+      +border-radius(50%)
+      @extend .ico-default-avatar
+
+      img
+        float: left
+        +border-radius(50%)
+
+    .header-user-name
+      width: 124px
+      color: $color-base
+      font-size: 14px
+      +to
+
+    .dropdown-menu
+      display: none
+      position: absolute
+      top: 38px
+      left: -1px
+      width: 100%
+      background: #fcfcff
+      border: 1px solid $color-border
+      z-index: 999
+      +border-radius(0 0 3px 3px)
+
+      .dropdown-menu-item
+        position: relative
+        height: 28px
+        line-height: 28px
+        padding-left: 44px
+        font-size: 14px
+        color: $color-base
+        background: #fcfcff
+        a
+          color: inherit
+        &:last-of-type
+          +border-radius(0 0 3px 3px)
+        &:hover
+          width: 155px
+          height: 29px
+          margin-top: -1px
+          margin-left: -1px
+          padding-left: 45px
+          margin-bottom: 0px
+          color: #fff
+          line-height: 29px
+          background: #868899
+
+          .ico-dd-settings
+            top: 9px
+            left: 16px
+            @extend .dd-settings-hover
+
+          .ico-dd-logout
+            top: 9px
+            left: 14px
+            @extend .dd-logout-hover
+
+        .ico-dd-settings
+          top: 8px
+          left: 15px
+
+        .ico-dd-logout
+          top: 8px
+          left: 13px
+
+  .header-menu
+    float: left
+    display: none
+    margin-top: -2px
+    margin-left: 70px
+    height: 40px
+    background-color: #fbfbff
+    +border-radius(3px)
+    +box-shadow(0 1px 3px #c8cbdc)
+    +media-below(1235)
+      display: block
+    +media-below(900)
+      display: block
+      margin-left: 0
+    .header-menu-item
+      float: left
+      position: relative
+      height: 100%
+      border-right: 1px solid #f1f2f7
+      +box-sizing(border-box)
+      &.first
+        +border-radius(3px 0 0 3px)
+      &.last
+        border-right: 0
+        +border-radius(0 3px 3px 0)
+
+      &.current
+        background-color: #fff
+        &:before
+          top: 100%
+          left: 50%
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+          border-color: rgba(255, 255, 255, 0)
+          border-top-color: #fff
+          border-width: 5px
+          margin-left: -5px
+
+    .header-menu-link
+      display: inline-block
+      position: relative
+      width: 50px
+      height: 100%
+      +box-sizing(border-box)
+      &.with-count
+        width: 75px
+        .header-menu-count
+          display: block
+      &:after
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+      &.mail-link
+        &.with-count
+          &:after
+            left: 15px
+            margin-left: 0
+        &:after
+          margin-top: -7px
+          margin-left: -9px
+          @extend .ico-mail
+      &.contacts-link
+        &:after
+          margin-top: -9px
+          margin-left: -7px
+          @extend .ico-widget-preview
+      &.calendar-link
+        &:after
+          margin-top: -8px
+          margin-left: -8px
+          @extend .ico-month_act
+      &.cloud-link
+        &:after
+          margin-top: -9px
+          margin-left: -13px
+          @extend .ico-mycloud
+      .link-text
+        display: block
+        +ti
+
+      .header-menu-count
+        display: none
+        position: absolute
+        top: 12px
+        left: 42px
+        min-width: 20px
+        height: 13px
+        line-height: 18px
+        text-align: center
+        color: #f4bba5
+        font-size: 11px
+        font-weight: 700
+        border: 1px solid #f4bba5
+        +border-radius(3px)
+        &:after,
+        &:before
+          right: 100%
+          top: 50%
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+
+        &:after
+          border-color: rgba(252, 252, 255, 0)
+          border-right-color: #fcfcff
+          border-width: 2px
+          margin-top: -2px
+
+        &:before
+          border-color: rgba(244, 187, 165, 0)
+          border-right-color: #f4bba5
+          border-width: 3px
+          margin-top: -3px

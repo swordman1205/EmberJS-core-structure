@@ -1,0 +1,49 @@
+.msg-preview-list
+  .msg-preview
+    .msg-preview-info
+      float: right
+      width: 55px
+      padding-top: 4px
+
+      .msg-time
+        margin-bottom: 5px
+        color: $color-gray
+        font-size: 12px
+        text-align: right
+        span
+          margin-left: 3px
+          text-transform: uppercase
+
+      .msg-attachments
+        margin: 0
+        +clear
+        .msg-attachments-box
+          float: right
+
+        .msg-count
+          float: left
+          margin-left: 3px
+          padding: 0 2px
+          min-width: 17px
+          height: 17px
+          font-size: 12px
+          line-height: 18px
+          color: #fff
+          text-align: center
+          background-color: #ccccd6
+          +box-sizing(border-box)
+          +border-radius(5px)
+
+        .msg-file-attached
+          float: left
+          margin-right: 3px
+          cursor: pointer
+          @extend .ico-file-attached
+
+        .msg-preview-flag
+          float: left
+          margin-top: -1px
+          cursor: pointer
+          @extend .ico-msg-preview-flag
+          &.complete
+            @extend .ico-msg-preview-flag_hov

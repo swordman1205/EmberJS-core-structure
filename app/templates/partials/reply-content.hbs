@@ -1,0 +1,107 @@
+<div class="msg-item-data">
+  <div class="msg-item-box link" {{action "toggleExpand"}}>
+    {{secure-image src=model.sender.iconUrl security=model.sender.iconSecurity class="msg-item-img"}}
+    <div class="msg-item-time">{{moment-calendar model.date}}</div>
+    <p class="author-name">{{model.sender.name}}</p>
+    {{#if model.isRevoked}}<span style="color:#62B8D1">Revoked</span>{{/if}}
+    {{recipients-list recipients=model.publicRecipients deliveries=model.deliveryContainer.deliveries}}
+    {{recipients-list recipients=model.copyRecipients deliveries=model.deliveryContainer.deliveries name="Cc:"}}
+    {{recipients-list recipients=model.hiddenRecipients deliveries=model.deliveryContainer.deliveries name="Bcc:"}}
+  </div>
+
+  <div class="msg-text">
+    {{sanitize model.message}}
+  </div>
+
+  {{#if model.attachments.length}}
+    <div class="msg-attachments">
+      <div class="msg-attachments-headline">
+        <p class="msg-attachments-size">{{format-size model.attachmentsSize}} {{model.attachments.length}} files</p>
+
+        <div class="msg-attachments-actions">
+          {{#if model.hasSomeAttachmentsOutOfCloud}}
+            <p class="cloud-save-all" {{action "saveAllAttachmentsToCloud" this}}>
+              <i class="ico ico-cloud-save"></i>
+              <span>Save all to My Cloud </span>
+            </p>
+          {{/if}}
+          <p class="download-all" {{action "downloadAllAttachments" this}}>
+            <i class="ico ico-download-all"></i>
+            <span>
+              {{#unless isDownloading}}
+                Download all
+              {{else}}
+                Downloading...
+              {{/unless}}
+            </span>
+          </p>
+        </div>
+      </div>
+      {{#each attachment in model.attachments}}
+        <div class="msg-file">
+          <div class="msg-file-box" {{action "downloadAttachment" attachment}}>
+            <a class="msg-file-name">
+              {{attachment.name}}
+              <a class="msg-file-size" href="#">({{format-fileinfo attachment.format}}, {{format-size attachment.size}}
+                )</a>
+            </a>
+          </div>
+          <div class="msg-file-actions">
+            {{#unless attachment.inCloud}}
+              <span class="save-to-cloud" {{action "saveAttachmentToCloud" attachment}}>
+                    <i class="ico ico-cloud-save"></i>
+                </span>
+            {{/unless}}
+            <a class="msg-file-link" {{action "downloadAttachment" attachment}}>
+              <i class="ico ico-file-attachments"></i>
+              {{#unless attachment.isDownloading}}
+                Download
+              {{else}}
+                Downloading...
+              {{/unless}}
+            </a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  <div class="msg-item active">
+    <div class="msg-item-data">
+      <ul class="msg-actions">
+
+        {{#if canReply}}
+          <li class="msg-actions-item">
+            <button {{action "replyAll"}} class="msg-actions-btn gray-btn {{if controllers.mailActions.doesReplyToAll 'current'}}">
+              Reply to all
+            </button>
+          </li>
+          <li class="msg-actions-item">
+            <button {{action "forward"}} class="msg-actions-btn gray-btn {{if controllers.mailActions.doesForward 'current'}}">
+              Forward
+            </button>
+          </li>
+          <li class="msg-actions-item">
+            <button {{action "reply"}} class="msg-actions-btn gray-btn {{if controllers.mailActions.doesReply 'current'}}">
+              Reply
+            </button>
+          </li>
+          {{#if canRevoke}}
+            <li class="msg-actions-item">
+              <button {{action "revoke"}} class="msg-actions-btn gray-btn {{if controllers.mailActions.doesReply 'current'}}">
+                Revoke
+              </button>
+            </li>
+          {{/if}}
+        {{/if}}
+
+      </ul>
+    </div>
+  </div>
+
+  {{#if hasDraft}}
+    {{render "authenticated.compose" model.draft}}
+  {{else}}
+    <p {{action "replyAll"}} class="msg-textarea {{unless isLast 'hide'}} {{unless canReply 'hide'}}">Click here to Reply All</p>
+  {{/if}}
+</div>

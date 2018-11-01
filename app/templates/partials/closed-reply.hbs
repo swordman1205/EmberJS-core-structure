@@ -1,0 +1,10 @@
+<div class="msg-item-link" {{action "toggleExpand"}}>
+  <div class="msg-box">
+    <i class="ico ico-msg-user"></i>
+    <p class="msg-item-author">{{model.sender.name}}</p>
+    <p class="msg-item-topic">
+      {{model.subject}}
+    </p>
+  </div>
+  <div class="msg-date">{{moment-calendar model.date}}</div>
+</div>
